@@ -1,30 +1,6 @@
 // Jogos previamente cadastrados
 const participantes = [
-    "Saulo Aguiar",
-    "Rafaella Nascimento",
-    "Sara Aguiar",
-    "Suely Aguiar",
-    "Raimundo Aguiar",
-    "Lelis Aguiar",
-    "Claudio Padilha",
-    "Risaldo Souza (Tentem)",
-    "Thiago Melo",
-    "Mayco Dias",
-    "André Melo",
-    "Jedson Cardoso",
-    "Marcus Né",
-    "Ronaldo Souza",
-    "Carolina Costa",
-    "Edriel Chagas",
-    "Saulo Aguiar",
-    "Wanderson Pamplona",
-    "Marcia Santos",
-    "Claudia Albuquerque",
-    "Ilailson Rocha",
-    "Ilailson Rocha",
-    "Wanderson Brito",
-    "Romero Santana",
-    "Rennan Brito"
+
   ];
 
   function displayParticipants() {
@@ -45,7 +21,7 @@ const jogos = [
   
   function calculateTotal() {
     const participantsList = document.querySelectorAll('ol.list-group li');
-    const amountPerPerson = 35;
+    const amountPerPerson = 48;
     const totalAmount = participantsList.length * amountPerPerson;
   
     document.getElementById('totalValue').textContent = `R$ ${totalAmount.toFixed(2)}`;
