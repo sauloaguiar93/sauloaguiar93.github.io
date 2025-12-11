@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolão Quina</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- <div class="container-fluid">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <h3 id="topo" class="text-center mb-4 py-3 text-white">BOLÃO LOTOFÁCIL DA INDEPENDÊNCIA</h3>
+  </div> -->
+  <div>
+    <div class="header-container">
+      <button class="openbtn" data-bs-toggle="modal" data-bs-target="#participantsModal">&#9776;</button>
+      <h3 class="text-white mb-0">BOLÃO DA QUINA - 230 MILHÕES</h3>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="participantsModal" tabindex="-1" aria-labelledby="participantsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="participantsModalLabel">Participantes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <ol class="list-group list-group-numbered" id="participantsList">
+            </ol>
+        </div>
+        <div class="modal-footer">
+          <h5>Valor Arrecadado: <span id="totalValue">R$ 0,00</span></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3">
+    <form id="gameForm">
+      <div class="row mb-3">
+        <div class="col">
+          <label for="drawnNumbers" class="form-label">Números Sorteados (separe por vírgula):</label>
+          <input type="text" class="form-control" id="drawnNumbers" placeholder="Ex: 1, 2, 3, 4, 5, 6...">
+        </div>
+        <div id="results" class="mt-3"></div>
+      </div>
+      <button type="button" class="btn btn-secondary" onclick="checkNumbers()">Conferir</button>
+      <a href="#" target="_blank" class="btn btn-outline-success">Comprovante de pagamento</a>
+    </form>
+    <div id="gamesList" class="mt-4"></div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

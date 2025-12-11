@@ -1,0 +1,45 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #260085;
+    padding: 10px;
+  }
+  .header-container h3 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .number {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #260085;
+    color:white;
+    font-weight: bold;
+  }
+  .matched {
+    background-color: #260085;
+    color: white;
+  }
+  
+  .openbtn {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #260085;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+  }
+  .openbtn:hover {
+    background: #fff;
+    border-radius: 5px;
+    color: #260085;
+  }
+  
