@@ -1,6 +1,7 @@
 // Jogos previamente cadastrados
 const participantes = [
     "Paulo Victor",
+    "Thiago Melo"
   ];
 
   function displayParticipants() {

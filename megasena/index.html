@@ -6,9 +6,30 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
+  <script>
+    (async () => {
+      try {
+        // Baixa o próprio HTML novamente para gerar o hash
+        const response = await fetch(window.location.href + '?t=' + Date.now());
+        const text = await response.text();
+
+        // Gera um hash simples baseado no conteúdo
+        const hash = btoa(unescape(encodeURIComponent(text))).substring(0, 20);
+
+        const saved = localStorage.getItem('page_hash');
+
+        if (saved !== hash) {
+          localStorage.setItem('page_hash', hash);
+          location.reload(true);
+        }
+      } catch (e) {
+        console.error("Erro ao verificar versão:", e);
+      }
+    })();
+  </script>
   <title>Bolão MegaSena</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=1">
 </head>
 <body>
   <!-- <div class="container-fluid">
