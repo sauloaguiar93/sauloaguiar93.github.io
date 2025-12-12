@@ -3,3 +3,9 @@
   Header set Pragma "no-cache"
   Header set Expires "0"
 </IfModule>
+
+<FilesMatch "\.(html|js|css)$">
+  Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+  Header set Pragma "no-cache"
+  Header set Expires 0
+</FilesMatch>

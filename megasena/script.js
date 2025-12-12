@@ -1,7 +1,6 @@
 // Jogos previamente cadastrados
 const participantes = [
     "Paulo Victor",
-    "Saulo Aguiar"
   ];
 
   function displayParticipants() {
@@ -118,11 +117,12 @@ const jogos = [
   });
 
   // Evita cache do script
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations().then(regs => {
-    regs.forEach(reg => reg.unregister());
-  });
-}
+// Desabilita cache do próprio script
+(function() {
+  const url = new URL(window.location.href);
+  url.searchParams.set('_', Date.now());
+  window.history.replaceState(null, '', url.toString());
+})();
   
 // Exibir os jogos e participantes ao carregar a página
 window.onload = function() {
