@@ -1,6 +1,7 @@
 // Jogos previamente cadastrados
 const participantes = [
-    "Paulo Victor"
+    "Paulo Victor",
+    "Saulo Aguiar"
   ];
 
   function displayParticipants() {
@@ -115,6 +116,13 @@ const jogos = [
       checkNumbers();  // Chama a função de conferência
     }
   });
+
+  // Evita cache do script
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(reg => reg.unregister());
+  });
+}
   
 // Exibir os jogos e participantes ao carregar a página
 window.onload = function() {
