@@ -5,6 +5,7 @@ const participantes = [
     "Claudio Padilha",
     "Wanderson Barbosa",
     "Harysonn Daniel",
+    "Sergio Bitencourt",
   ];
 
   function displayParticipants() {
