@@ -7,6 +7,7 @@ const participantes = [
     "Harysonn Daniel",
     "Sergio Bitencourt",
     "Lélis Aguiar",
+    "Rafaella Nascimento",
   ];
 
   function displayParticipants() {
