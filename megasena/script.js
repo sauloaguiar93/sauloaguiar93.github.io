@@ -11,6 +11,7 @@ const participantes = [
     "Waldiney Barros",
     "Romero Santana",
     "Wanderson Brito",
+    "Elder Moreira/Gilson Clê",
   ];
 
   function displayParticipants() {
