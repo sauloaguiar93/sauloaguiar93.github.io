@@ -9,6 +9,7 @@ const participantes = [
     "Lélis Aguiar",
     "Rafaella Nascimento",
     "Waldiney Barros",
+    "Romero Santana",
   ];
 
   function displayParticipants() {
