@@ -11,7 +11,13 @@ const participantes = [
     "Waldiney Barros",
     "Romero Santana",
     "Wanderson Brito",
-    "Elder Moreira/Gilson Clê",
+    "Elder Moreira / Gilson Clê",
+    "Romero Santana",
+    "Romero Santana",
+    "Kleber Cruz",
+    "Wander Silva / Max Araujo",
+    "Roberto Mendes / Noaman",
+    "Carolina Costa",
   ];
 
   function displayParticipants() {
