@@ -25,6 +25,7 @@ const participantes = [
     "Ilailson Rocha",
     "Andre Melo",
     "Fabricio Pereira",
+    "Galiza / Luciano",
   ];
 
   function displayParticipants() {
