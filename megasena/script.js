@@ -11,6 +11,7 @@ const participantes = [
     "Waldiney Barros",
     "Romero Santana",
     "Wanderson Brito",
+    "Wanderson Brito",
     "Elder Moreira / Gilson Clê",
     "Romero Santana",
     "Romero Santana",
