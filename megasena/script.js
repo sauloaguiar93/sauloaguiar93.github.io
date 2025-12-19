@@ -21,6 +21,7 @@ const participantes = [
     "Mayco Dias",
     "Claudia Albuquerque",
     "Saulo Aguiar",
+    "Rennan Brito",
   ];
 
   function displayParticipants() {
