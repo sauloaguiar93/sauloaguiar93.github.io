@@ -22,6 +22,9 @@ const participantes = [
     "Claudia Albuquerque",
     "Saulo Aguiar",
     "Rennan Brito",
+    "Ilailson Rocha",
+    "Andre Melo",
+    "Fabricio Pereira",
   ];
 
   function displayParticipants() {
