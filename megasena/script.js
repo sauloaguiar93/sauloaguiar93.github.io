@@ -18,6 +18,9 @@ const participantes = [
     "Wander Silva / Max Araujo",
     "Roberto Mendes / Noaman",
     "Carolina Costa",
+    "Mayco Dias",
+    "Claudia Albuquerque",
+    "Saulo Aguiar",
   ];
 
   function displayParticipants() {
