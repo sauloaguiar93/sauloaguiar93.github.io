@@ -33,6 +33,7 @@ const participantes = [
     "Romulo Rocha",
     "Reginaldo Sales",
     "Marcia Santos",
+    "Edriel Chagas",
     "Levi Chagas",
     "Suely Aguiar",
     "Raimundo Aguiar",
