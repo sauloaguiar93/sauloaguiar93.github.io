@@ -39,6 +39,8 @@ const participantes = [
     "Raimundo Aguiar",
     "Maia Garcia",
     "EdBruno Silva",
+    "Ronaldo Souza",
+    "Ronaldo Souza",
   ];
 
   function displayParticipants() {
