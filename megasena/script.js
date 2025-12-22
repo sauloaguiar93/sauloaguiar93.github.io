@@ -38,6 +38,7 @@ const participantes = [
     "Suely Aguiar",
     "Raimundo Aguiar",
     "Maia Garcia",
+    "EdBruno Silva",
   ];
 
   function displayParticipants() {
