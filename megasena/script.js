@@ -41,6 +41,8 @@ const participantes = [
     "EdBruno Silva",
     "Ronaldo Souza",
     "Ronaldo Souza",
+    "Lilian Souza",
+    "Lilian Souza",
   ];
 
   function displayParticipants() {
