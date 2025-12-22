@@ -27,6 +27,16 @@ const participantes = [
     "Andre Melo",
     "Fabricio Pereira",
     "Galiza / Luciano",
+    "Jedson Cardoso",
+    "Jedson Cardoso",
+    "Romulo Rocha",
+    "Romulo Rocha",
+    "Reginaldo Sales",
+    "Marcia Santos",
+    "Levi Chagas",
+    "Suely Aguiar",
+    "Raimundo Aguiar",
+    "Maia Garcia",
   ];
 
   function displayParticipants() {
