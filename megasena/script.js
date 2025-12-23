@@ -46,6 +46,7 @@ const participantes = [
     "Renato Souza",
     "Ronie da Farinha",
     "Reginaldo Souza",
+    "Leandro Freitas",
   ];
 
   function displayParticipants() {
