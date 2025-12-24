@@ -22,6 +22,7 @@ const participantes = [
     "Mayco Dias",
     "Claudia Albuquerque",
     "Saulo Aguiar",
+    "Saulo Aguiar",
     "Rennan Brito",
     "Ilailson Rocha",
     "Andre Melo",
@@ -47,6 +48,8 @@ const participantes = [
     "Ronie da Farinha",
     "Reginaldo Souza",
     "Leandro Freitas",
+    "Wesley Souza",
+    "Wesley Souza",
   ];
 
   function displayParticipants() {
