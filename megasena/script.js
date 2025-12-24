@@ -54,6 +54,7 @@ const participantes = [
     "Sara Aguiar",
     "Frank Sampaio",
     "Frank Sampaio",
+    "Gilvandro Ferreira",
   ];
 
   function displayParticipants() {
