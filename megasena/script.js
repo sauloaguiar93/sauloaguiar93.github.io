@@ -57,6 +57,7 @@ const participantes = [
     "Gilvandro Ferreira",
     "Diene Silva",
     "Diene Silva",
+    "Kelly Gomes",
   ];
 
   function displayParticipants() {
