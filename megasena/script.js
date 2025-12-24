@@ -50,6 +50,7 @@ const participantes = [
     "Leandro Freitas",
     "Wesley Souza",
     "Wesley Souza",
+    "Jean Souza",
   ];
 
   function displayParticipants() {
