@@ -59,6 +59,10 @@ const participantes = [
     "Diene Silva",
     "Kelly Gomes",
     "Israel Figueiredo",
+    "Risaldo Souza",
+    "Risaldo Souza",
+    "Leandro Pedro",
+    "Diego Felix",
   ];
 
   function displayParticipants() {
