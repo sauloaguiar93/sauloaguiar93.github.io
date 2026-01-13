@@ -1,84 +1,122 @@
+import { db } from "./firebase.js";
+
 import {
-  getFirestore,
   collection,
-  getDocs
-} from "./firebase.js";
+  doc,
+  getDocs,
+  addDoc,
+  runTransaction,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-import { reservarNumeros } from "./reserva.js";
+const numerosContainer = document.getElementById("numeros");
+const form = document.getElementById("formReserva");
 
-const db = getFirestore();
-const grid = document.getElementById("grid");
-const selecionados = new Set();
+let selecionados = [];
 
-const qtdNumeros = document.getElementById("qtdNumeros");
-const qtdCotas = document.getElementById("qtdCotas");
-const mensagem = document.getElementById("mensagem");
-
+// ==========================
+// CARREGAR NÚMEROS
+// ==========================
 async function carregarNumeros() {
+  numerosContainer.innerHTML = "";
+
   const snap = await getDocs(collection(db, "numeros"));
 
-  snap.forEach(docSnap => {
+  snap.forEach((docSnap) => {
     const data = docSnap.data();
-    const div = document.createElement("div");
 
-    div.textContent = data.numero;
-    div.classList.add("numero", data.status);
-    div.dataset.id = docSnap.id;
+    const btn = document.createElement("button");
+    btn.textContent = data.numero;
+    btn.className = "numero";
+    btn.disabled = data.status !== "disponivel";
 
-    if (data.status === "disponivel") {
-      div.onclick = () => toggleNumero(div);
+    if (selecionados.includes(data.numero)) {
+      btn.classList.add("ativo");
     }
 
-    grid.appendChild(div);
+    btn.onclick = () => toggleNumero(data.numero, btn);
+    numerosContainer.appendChild(btn);
   });
 }
 
-function toggleNumero(el) {
-  const id = el.dataset.id;
+carregarNumeros();
 
-  if (selecionados.has(id)) {
-    selecionados.delete(id);
-    el.classList.remove("selecionado");
-  } else {
-    selecionados.add(id);
-    el.classList.add("selecionado");
+// ==========================
+// SELEÇÃO DE NÚMEROS
+// ==========================
+function toggleNumero(numero, btn) {
+  if (selecionados.includes(numero)) {
+    selecionados = selecionados.filter(n => n !== numero);
+    btn.classList.remove("ativo");
+    return;
   }
 
-  atualizarInfo();
+  selecionados.push(numero);
+  btn.classList.add("ativo");
 }
 
-function atualizarInfo() {
-  qtdNumeros.textContent = selecionados.size;
-  qtdCotas.textContent = Math.floor(selecionados.size / 5);
-}
-
-document.getElementById("formReserva").addEventListener("submit", async e => {
+// ==========================
+// ENVIO DA RESERVA
+// ==========================
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  mensagem.textContent = "";
 
-  if (selecionados.size === 0 || selecionados.size % 5 !== 0) {
-    mensagem.textContent = "Selecione múltiplos de 5 números.";
+  const nome = form.nome.value.trim();
+  const whatsapp = form.whatsapp.value.trim();
+
+  if (selecionados.length === 0 || selecionados.length % 5 !== 0) {
+    alert("Selecione múltiplos de 5 números.");
     return;
   }
 
-  const nome = document.getElementById("nome").value.trim();
-  const whatsapp = document.getElementById("whatsapp").value.trim();
-
-  if (!nome || !whatsapp) {
-    mensagem.textContent = "Preencha nome e WhatsApp.";
-    return;
-  }
+  const quantidadeCotas = selecionados.length / 5;
 
   try {
-    await reservarNumeros([...selecionados], nome, whatsapp);
-    mensagem.textContent = "Reserva realizada com sucesso!";
-    grid.innerHTML = "";
-    selecionados.clear();
-    atualizarInfo();
+    // 1️⃣ Criar documento da reserva
+    const reservaRef = await addDoc(collection(db, "reservas"), {
+      nome,
+      whatsapp,
+      numeros: selecionados,
+      quantidadeCotas,
+      status: "reservado",
+      criadoEm: serverTimestamp()
+    });
+
+    const reservaId = reservaRef.id;
+
+    // 2️⃣ Reservar cada número com transação
+    for (const numero of selecionados) {
+      const numeroRef = doc(db, "numeros", numero);
+
+      await runTransaction(db, async (transaction) => {
+        const snap = await transaction.get(numeroRef);
+
+        if (!snap.exists()) {
+          throw "Número não existe";
+        }
+
+        if (snap.data().status !== "disponivel") {
+          throw `Número ${numero} indisponível`;
+        }
+
+        transaction.update(numeroRef, {
+          status: "reservado",
+          nome,
+          whatsapp,
+          reservaId,
+          reservadoEm: serverTimestamp()
+        });
+      });
+    }
+
+    alert("Reserva realizada com sucesso! Aguarde confirmação do pagamento.");
+
+    selecionados = [];
+    form.reset();
     carregarNumeros();
-  } catch (err) {
-    mensagem.textContent = err.message;
+
+  } catch (error) {
+    console.error(error);
+    alert("Erro ao realizar reserva. Tente novamente.");
   }
 });
-
-carregarNumeros();

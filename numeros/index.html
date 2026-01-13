@@ -1,34 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Reserva de Números</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #numeros {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    button.numero {
+      padding: 8px;
+      border: none;
+      cursor: pointer;
+      background: #eee;
+    }
+
+    button.numero:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    button.numero.ativo {
+      background: green;
+      color: white;
+    }
+
+    form {
+      max-width: 300px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Escolha seus números</h1>
 
-  <p>
-    Selecione números de <strong>000 a 999</strong><br />
-    <strong>1 cota = 5 números</strong>
-  </p>
+<h2>Escolha seus números</h2>
+<p>Selecione múltiplos de <strong>5 números</strong> (1 cota = 5 números)</p>
 
-  <div id="info">
-    Selecionados: <span id="qtdNumeros">0</span> |
-    Cotas: <span id="qtdCotas">0</span>
-  </div>
+<div id="numeros"></div>
 
-  <div id="grid"></div>
+<h3>Seus dados</h3>
+<form id="formReserva">
+  <input type="text" name="nome" placeholder="Nome" required>
+  <input type="text" name="whatsapp" placeholder="WhatsApp" required>
+  <button type="submit">Reservar</button>
+</form>
 
-  <form id="formReserva">
-    <input type="text" id="nome" placeholder="Nome" required />
-    <input type="text" id="whatsapp" placeholder="WhatsApp" required />
-    <button type="submit">Reservar</button>
-  </form>
-
-  <p id="mensagem"></p>
-
-  <script type="module" src="js/firebase.js"></script>
-  <script type="module" src="js/app.js"></script>
+<script type="module" src="js/app.js"></script>
 </body>
 </html>
