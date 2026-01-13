@@ -2,63 +2,151 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Reserva de Números</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escolha seus números</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <style>
+    :root {
+      --primary: #16a34a;
+      --reserved: #f59e0b;
+      --disabled: #d1d5db;
+      --bg: #f9fafb;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: #111;
+    }
+
+    header {
+      padding: 16px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 18px;
+      margin: 0 0 4px;
+    }
+
+    header p {
+      font-size: 14px;
+      margin: 0;
+      color: #555;
+    }
+
+    main {
+      padding: 16px;
+      padding-bottom: 120px;
     }
 
     #numeros {
       display: grid;
-      grid-template-columns: repeat(10, 1fr);
-      gap: 6px;
-      margin-bottom: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+      gap: 10px;
     }
 
     button.numero {
-      padding: 8px;
+      height: 56px;
+      border-radius: 12px;
       border: none;
+      font-size: 16px;
+      font-weight: 600;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,.1);
       cursor: pointer;
-      background: #eee;
+      transition: transform .05s ease;
     }
 
-    button.numero:disabled {
-      background: #ccc;
-      cursor: not-allowed;
+    button.numero:active {
+      transform: scale(.96);
     }
 
     button.numero.ativo {
-      background: green;
+      background: var(--primary);
       color: white;
     }
 
-    form {
-      max-width: 300px;
+    button.numero:disabled {
+      background: var(--disabled);
+      color: #666;
+      cursor: not-allowed;
     }
 
-    input, button {
+    .barra {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      box-shadow: 0 -2px 10px rgba(0,0,0,.15);
+      padding: 12px 16px;
+    }
+
+    .contador {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .contador strong {
+      color: var(--primary);
+    }
+
+    form input {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
+      padding: 12px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 12px;
+    }
+
+    form button:disabled {
+      background: #9ca3af;
     }
   </style>
 </head>
+
 <body>
 
-<h2>Escolha seus números</h2>
-<p>Selecione múltiplos de <strong>5 números</strong> (1 cota = 5 números)</p>
+<header>
+  <h1>🎟️ Escolha seus números</h1>
+  <p>1 cota = 5 números</p>
+</header>
 
-<div id="numeros"></div>
+<main>
+  <div id="numeros"></div>
+</main>
 
-<h3>Seus dados</h3>
-<form id="formReserva">
-  <input type="text" name="nome" placeholder="Nome" required>
-  <input type="text" name="whatsapp" placeholder="WhatsApp" required>
-  <button type="submit">Reservar</button>
-</form>
+<div class="barra">
+  <div class="contador">
+    Selecionados: <strong id="contador">0</strong>
+  </div>
+
+  <form id="formReserva">
+    <input name="nome" placeholder="Seu nome" required>
+    <input name="whatsapp" placeholder="WhatsApp" required>
+    <button type="submit" disabled id="btnReservar">
+      Reservar números
+    </button>
+  </form>
+</div>
 
 <script type="module" src="js/app.js"></script>
 </body>

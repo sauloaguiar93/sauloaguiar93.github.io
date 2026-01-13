@@ -9,7 +9,11 @@ import {
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
+const SEU_WHATSAPP = "5591981623605";
+
 const numerosContainer = document.getElementById("numeros");
+const contadorEl = document.getElementById("contador");
+const btnReservar = document.getElementById("btnReservar");
 const form = document.getElementById("formReserva");
 
 let selecionados = [];
@@ -42,21 +46,30 @@ async function carregarNumeros() {
 carregarNumeros();
 
 // ==========================
-// SELEÇÃO DE NÚMEROS
+// SELEÇÃO
 // ==========================
 function toggleNumero(numero, btn) {
   if (selecionados.includes(numero)) {
     selecionados = selecionados.filter(n => n !== numero);
     btn.classList.remove("ativo");
-    return;
+  } else {
+    selecionados.push(numero);
+    btn.classList.add("ativo");
   }
 
-  selecionados.push(numero);
-  btn.classList.add("ativo");
+  atualizarUI();
+}
+
+function atualizarUI() {
+  contadorEl.textContent = selecionados.length;
+
+  btnReservar.disabled =
+    selecionados.length === 0 ||
+    selecionados.length % 5 !== 0;
 }
 
 // ==========================
-// ENVIO DA RESERVA
+// ENVIO
 // ==========================
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -64,15 +77,9 @@ form.addEventListener("submit", async (e) => {
   const nome = form.nome.value.trim();
   const whatsapp = form.whatsapp.value.trim();
 
-  if (selecionados.length === 0 || selecionados.length % 5 !== 0) {
-    alert("Selecione múltiplos de 5 números.");
-    return;
-  }
-
   const quantidadeCotas = selecionados.length / 5;
 
   try {
-    // 1️⃣ Criar documento da reserva
     const reservaRef = await addDoc(collection(db, "reservas"), {
       nome,
       whatsapp,
@@ -84,22 +91,16 @@ form.addEventListener("submit", async (e) => {
 
     const reservaId = reservaRef.id;
 
-    // 2️⃣ Reservar cada número com transação
     for (const numero of selecionados) {
-      const numeroRef = doc(db, "numeros", numero);
+      const ref = doc(db, "numeros", numero);
 
-      await runTransaction(db, async (transaction) => {
-        const snap = await transaction.get(numeroRef);
-
-        if (!snap.exists()) {
-          throw "Número não existe";
-        }
-
+      await runTransaction(db, async (tx) => {
+        const snap = await tx.get(ref);
         if (snap.data().status !== "disponivel") {
-          throw `Número ${numero} indisponível`;
+          throw "Indisponível";
         }
 
-        transaction.update(numeroRef, {
+        tx.update(ref, {
           status: "reservado",
           nome,
           whatsapp,
@@ -109,14 +110,30 @@ form.addEventListener("submit", async (e) => {
       });
     }
 
-    alert("Reserva realizada com sucesso! Aguarde confirmação do pagamento.");
+    const mensagem = `
+📢 NOVA RESERVA
+
+👤 ${nome}
+📞 ${whatsapp}
+
+🎟️ Números:
+${selecionados.join(", ")}
+
+📦 Cotas: ${quantidadeCotas}
+`;
+
+    window.open(
+      `https://wa.me/${SEU_WHATSAPP}?text=${encodeURIComponent(mensagem)}`,
+      "_blank"
+    );
 
     selecionados = [];
     form.reset();
+    atualizarUI();
     carregarNumeros();
 
-  } catch (error) {
-    console.error(error);
-    alert("Erro ao realizar reserva. Tente novamente.");
+  } catch (err) {
+    alert("Erro ao reservar. Tente novamente.");
+    console.error(err);
   }
 });
