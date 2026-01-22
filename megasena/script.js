@@ -2,6 +2,8 @@
 const participantes = [
     "Rafaella Nascimento",
     "Saulo Aguiar",
+    "Saulo Aguiar",
+    "Saulo Aguiar",
     "Ilailson Rocha",
     "Rennan Brito",
     "Suely Aguiar",
