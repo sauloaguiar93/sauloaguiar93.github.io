@@ -36,6 +36,8 @@ const participantes = [
     "Levi Chagas",
     "Levi Chagas",
     "Levi Chagas",
+    "Edriel Chagas",
+    "Jedson Cardoso",
   ];
 
   function displayParticipants() {
