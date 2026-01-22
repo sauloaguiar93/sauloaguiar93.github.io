@@ -16,6 +16,7 @@ const participantes = [
     "Paulo Victor",
     "Wanderson Brito",
     "Tenten Souza",
+    "Tenten Souza",
     "Marcus Né",
     "Marcia Santos",
     "Roberto Mendes",
