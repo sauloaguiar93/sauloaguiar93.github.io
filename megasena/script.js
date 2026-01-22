@@ -14,6 +14,7 @@ const participantes = [
     "Edbruno Silva",
     "Ney Barros",
     "Paulo Victor",
+    "Wanderson Brito",
   ];
 
   function displayParticipants() {
