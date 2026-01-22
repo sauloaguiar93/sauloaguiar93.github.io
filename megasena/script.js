@@ -29,6 +29,7 @@ const participantes = [
     "Wander Melo",
     "Claudio Padilha",
     "Wanderson Pamplona",
+    "Jonathan Diego",
   ];
 
   function displayParticipants() {
