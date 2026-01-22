@@ -2,7 +2,6 @@
 const participantes = [
     "Rafaella Nascimento",
     "Saulo Aguiar",
-    "Saulo Aguiar",
     "Ilailson Rocha",
     "Rennan Brito",
     "Suely Aguiar",
@@ -39,6 +38,8 @@ const participantes = [
     "Edriel Chagas",
     "Jedson Cardoso",
     "Thiago Melo",
+    "Mayco Dias",
+    "Renato Souza",
   ];
 
   function displayParticipants() {
