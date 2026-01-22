@@ -11,7 +11,7 @@ const participantes = [
     "Lelis Aguiar",
     "Sara Aguiar",
     "Jean Souza",
-    "Edbruno",
+    "Edbruno Silva",
     "Ney Barros",
     "Paulo Victor",
   ];
