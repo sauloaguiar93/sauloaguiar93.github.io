@@ -41,6 +41,7 @@ const participantes = [
     "Renato Souza",
     "Saulo Aguiar",
     "Saulo Aguiar",
+    "Naldo Souza",
   ];
 
   function displayParticipants() {
