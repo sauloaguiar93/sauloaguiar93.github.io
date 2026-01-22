@@ -39,9 +39,11 @@ const participantes = [
     "Mayco Dias",
     "Rennan Brito",
     "Renato Souza",
-    "Saulo Aguiar",
-    "Saulo Aguiar",
     "Naldo Souza",
+    "Hary Daniel",
+    "Hary Daniel",
+    "Saulo Aguiar",
+    "Saulo Aguiar",
   ];
 
   function displayParticipants() {
