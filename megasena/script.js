@@ -38,6 +38,7 @@ const participantes = [
     "Levi Chagas",
     "Edriel Chagas",
     "Jedson Cardoso",
+    "Thiago Melo",
   ];
 
   function displayParticipants() {
