@@ -15,6 +15,9 @@ const participantes = [
     "Ney Barros",
     "Paulo Victor",
     "Wanderson Brito",
+    "Tenten Souza",
+    "Marcus Né",
+    "Marcia Santos",
   ];
 
   function displayParticipants() {
