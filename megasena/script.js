@@ -23,6 +23,11 @@ const participantes = [
     "Claudia Albuquerque",
     "Romulo Rocha",
     "Romulo Rocha",
+    "Gilson Clê",
+    "Romero Santana",
+    "Carolina Costa",
+    "Wander Melo",
+    "Claudio Padilha",
   ];
 
   function displayParticipants() {
