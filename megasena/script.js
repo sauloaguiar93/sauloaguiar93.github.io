@@ -20,6 +20,8 @@ const participantes = [
     "Marcia Santos",
     "Roberto Mendes",
     "Claudia Albuquerque",
+    "Romulo Rocha",
+    "Romulo Rocha",
   ];
 
   function displayParticipants() {
