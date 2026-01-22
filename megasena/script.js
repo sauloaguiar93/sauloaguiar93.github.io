@@ -44,7 +44,7 @@ const participantes = [
     "Hary Daniel",
     "Saulo Aguiar",
     "Saulo Aguiar",
-    "Reginaldo",
+    "Reginaldo Sales",
   ];
 
   function displayParticipants() {
