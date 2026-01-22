@@ -3,6 +3,11 @@ const participantes = [
     "Rafaella Nascimento",
     "Saulo Aguiar",
     "Ilailson Rocha",
+    "Rennan Brito",
+    "Suely Aguiar",
+    "Raimundo Aguiar",
+    "Jean Souza",
+    "Lelis Aguiar",
   ];
 
   function displayParticipants() {
