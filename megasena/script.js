@@ -31,7 +31,7 @@ const jogos = [
   
   function calculateTotal() {
     const participantsList = document.querySelectorAll('ol.list-group li');
-    const amountPerPerson = 50;
+    const amountPerPerson = 12;
     const totalAmount = participantsList.length * amountPerPerson;
   
     document.getElementById('totalValue').textContent = `R$ ${totalAmount.toFixed(2)}`;
