@@ -1,18 +1,14 @@
 // Jogos previamente cadastrados
 const participantes = [
     "Rafaella Nascimento",
-    "Saulo Aguiar",
     "Ilailson Rocha",
-    "Rennan Brito",
+    "Jean Souza",
     "Suely Aguiar",
     "Raimundo Aguiar",
     "Lelis Aguiar",
     "Lelis Aguiar",
-    "Sara Aguiar",
-    "Jean Souza",
-    "Edbruno Silva",
-    "Ney Barros",
     "Paulo Victor",
+    "Waldiney Barros",
     "Wanderson Brito",
     "Tenten Souza",
     "Tenten Souza",
@@ -22,7 +18,9 @@ const participantes = [
     "Claudia Albuquerque",
     "Romulo Rocha",
     "Romulo Rocha",
+    "Sara Aguiar",
     "Gilson Clê",
+    "Edbruno Silva",
     "Romero Santana",
     "Carolina Costa",
     "Wander Melo",
@@ -39,7 +37,9 @@ const participantes = [
     "Jedson Cardoso",
     "Thiago Melo",
     "Mayco Dias",
+    "Rennan Brito",
     "Renato Souza",
+    "Saulo Aguiar",
   ];
 
   function displayParticipants() {
