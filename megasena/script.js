@@ -17,6 +17,7 @@ const participantes = [
     "Carolina Costa",
     "Hary Daniel",
     "Hary Daniel",
+    "Wanderson Brito",
     
     
     // "Jean Souza",
@@ -24,7 +25,6 @@ const participantes = [
     // "Raimundo Aguiar",
     // "Lelis Aguiar",
     // "Lelis Aguiar",
-    // "Wanderson Brito",
     // "Tenten Souza",
     // "Tenten Souza",
     // "Marcia Santos",
