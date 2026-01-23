@@ -26,11 +26,11 @@ const participantes = [
     "Jedson Cardoso",
     "Wanderson Pamplona",
     "Marcia Santos",
-    
-    
+    "Tenten Souza",
+    "Tenten Souza",
+    "Tenten Souza",
+        
     // "Jean Souza",
-    // "Tenten Souza",
-    // "Tenten Souza",
     // "Sara Aguiar",
     // "Gilson Clê",
     // "Edbruno Silva",
