@@ -11,6 +11,7 @@ const participantes = [
     "Paulo Victor",
     "Noaman Miranda",
     "Roberto Mendes",
+    "Edriel Chagas",
     
     
     // "Jean Souza",
@@ -39,7 +40,6 @@ const participantes = [
     // "Levi Chagas",
     // "Levi Chagas",
     // "Levi Chagas",
-    // "Edriel Chagas",
     // "Jedson Cardoso",
     // "Mayco Dias",
     // "Rennan Brito",
