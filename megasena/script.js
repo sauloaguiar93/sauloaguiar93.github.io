@@ -29,6 +29,9 @@ const participantes = [
     "Tenten Souza",
     "Tenten Souza",
     "Tenten Souza",
+    "Ronaldo Souza",
+    "Ronaldo Souza",
+    "Ronaldo Souza",
         
     // "Jean Souza",
     // "Sara Aguiar",
@@ -37,8 +40,6 @@ const participantes = [
     // "Wander Melo",
     // "Claudio Padilha",
     // "Jonathan Diego",
-    // "Ronaldo Souza",
-    // "Ronaldo Souza",
     // "Levi Chagas",
     // "Levi Chagas",
     // "Levi Chagas",
