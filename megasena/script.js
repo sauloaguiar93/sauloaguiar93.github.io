@@ -18,11 +18,12 @@ const participantes = [
     "Hary Daniel",
     "Hary Daniel",
     "Wanderson Brito",
+    "Mayco Dias",
+    "Suely Aguiar",
+    "Raimundo Aguiar",
     
     
     // "Jean Souza",
-    // "Suely Aguiar",
-    // "Raimundo Aguiar",
     // "Lelis Aguiar",
     // "Lelis Aguiar",
     // "Tenten Souza",
@@ -42,7 +43,6 @@ const participantes = [
     // "Levi Chagas",
     // "Levi Chagas",
     // "Jedson Cardoso",
-    // "Mayco Dias",
     // "Rennan Brito",
     // "Renato Souza",
     // "Naldo Souza",
