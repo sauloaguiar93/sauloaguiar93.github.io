@@ -17,6 +17,13 @@ const participantes = [
     "Jedson Cardoso",
     "Jean Souza",
     "Marcia Santos",
+    "Reginaldo Souza",
+    "Pedro Souza",
+    "Mayco Dias",
+    "Fabricio Pereira",
+    "Marcus Né",
+    
+    
     
     // "Romulo Rocha",
     // "Romulo Rocha",
@@ -27,10 +34,8 @@ const participantes = [
     // "Roberto Mendes",
     // "Edriel Chagas",
     // "Claudia Albuquerque",
-    // "Marcus Né",
     // "Carolina Costa",
     // "Wanderson Brito",
-    // "Mayco Dias",
     // "Wanderson Pamplona",
     // "Tenten Souza",
     // "Tenten Souza",
