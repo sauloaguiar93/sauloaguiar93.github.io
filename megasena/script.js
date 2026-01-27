@@ -35,6 +35,7 @@ const participantes = [
     "Jonathan Diegi",
     "André Melo",
     "Edbruno Silva",
+    "Claudio Padilha",
     
     
     // "Romulo Rocha",
@@ -53,7 +54,6 @@ const participantes = [
     // "Levi Chagas",
     // "Reginaldo Sales",
     // "Reginaldo Sales",
-    // "Claudio Padilha",
   ];
 
   function displayParticipants() {
