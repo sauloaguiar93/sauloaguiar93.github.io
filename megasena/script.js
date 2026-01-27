@@ -41,6 +41,7 @@ const participantes = [
     "Renato Souza",
     "Naldo Souza",
     "Wander Melo",
+    "Kleber Cruz",
     
     
     // "Romulo Rocha",
@@ -50,7 +51,6 @@ const participantes = [
     // "Tenten Souza",
     // "Tenten Souza",
     // "Tenten Souza",
-    // "Kleber Cruz",
     // "Levi Chagas",
     // "Levi Chagas",
     // "Reginaldo Sales",
