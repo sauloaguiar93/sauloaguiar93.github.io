@@ -42,6 +42,8 @@ const participantes = [
     "Naldo Souza",
     "Wander Melo",
     "Kleber Cruz",
+    "Marcos Almeida",
+    "Kelly Gomes",
     
     
     // "Romulo Rocha",
