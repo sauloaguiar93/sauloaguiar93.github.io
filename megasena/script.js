@@ -48,11 +48,11 @@ const participantes = [
     "Reginaldo Sales",
     "Tenten Souza",
     "Tenten Souza",
+    "Noaman Miranda",
     
     // "Romulo Rocha",
     // "Romulo Rocha",
     // "Leandro Pedro",
-    // "Noaman Miranda",
     // "Levi Chagas",
     // "Levi Chagas",
   ];
