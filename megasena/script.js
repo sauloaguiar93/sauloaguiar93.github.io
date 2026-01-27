@@ -45,19 +45,16 @@ const participantes = [
     "Marcos Almeida",
     "Kelly Gomes",
     "Adenilson Lopes",
-    
+    "Reginaldo Sales",
+    "Tenten Souza",
+    "Tenten Souza",
     
     // "Romulo Rocha",
     // "Romulo Rocha",
     // "Leandro Pedro",
     // "Noaman Miranda",
-    // "Tenten Souza",
-    // "Tenten Souza",
-    // "Tenten Souza",
     // "Levi Chagas",
     // "Levi Chagas",
-    // "Reginaldo Sales",
-    // "Reginaldo Sales",
   ];
 
   function displayParticipants() {
