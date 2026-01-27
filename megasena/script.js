@@ -23,6 +23,11 @@ const participantes = [
     "Fabricio Pereira",
     "Marcus Né",
     "Wanderson Pamplona",
+    "Claudia Albuquerque",
+    "Waldiney Barros",
+    "Sara Aguiar",
+    "Saulo Aguiar",
+    "Saulo Aguiar",
     
     
     
@@ -30,11 +35,9 @@ const participantes = [
     // "Romulo Rocha",
     // "Leandro Pedro",
     // "Romero Santana",
-    // "Waldiney Barros",
     // "Noaman Miranda",
     // "Roberto Mendes",
     // "Edriel Chagas",
-    // "Claudia Albuquerque",
     // "Carolina Costa",
     // "Wanderson Brito",
     // "Tenten Souza",
@@ -50,9 +53,6 @@ const participantes = [
     // "Reginaldo Sales",
     // "Reginaldo Sales",
     // "Claudio Padilha",
-    // "Sara Aguiar",
-    // "Saulo Aguiar",
-    // "Saulo Aguiar",
   ];
 
   function displayParticipants() {
