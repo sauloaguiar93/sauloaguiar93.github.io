@@ -34,6 +34,7 @@ const participantes = [
     "Carolina Costa",
     "Jonathan Diegi",
     "André Melo",
+    "Edbruno Silva",
     
     
     // "Romulo Rocha",
@@ -50,7 +51,6 @@ const participantes = [
     // "Naldo Souza",
     // "Levi Chagas",
     // "Levi Chagas",
-    // "Edbruno Silva",
     // "Reginaldo Sales",
     // "Reginaldo Sales",
     // "Claudio Padilha",
