@@ -36,6 +36,7 @@ const participantes = [
     "André Melo",
     "Edbruno Silva",
     "Claudio Padilha",
+    "Elder Moreira",
     
     
     // "Romulo Rocha",
