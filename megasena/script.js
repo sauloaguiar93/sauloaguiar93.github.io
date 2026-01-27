@@ -22,6 +22,7 @@ const participantes = [
     "Mayco Dias",
     "Fabricio Pereira",
     "Marcus Né",
+    "Wanderson Pamplona",
     
     
     
@@ -36,7 +37,6 @@ const participantes = [
     // "Claudia Albuquerque",
     // "Carolina Costa",
     // "Wanderson Brito",
-    // "Wanderson Pamplona",
     // "Tenten Souza",
     // "Tenten Souza",
     // "Tenten Souza",
