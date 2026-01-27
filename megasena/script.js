@@ -44,6 +44,7 @@ const participantes = [
     "Kleber Cruz",
     "Marcos Almeida",
     "Kelly Gomes",
+    "Adenilson Lopes",
     
     
     // "Romulo Rocha",
