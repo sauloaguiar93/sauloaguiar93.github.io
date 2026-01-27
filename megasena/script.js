@@ -37,13 +37,13 @@ const participantes = [
     "Edbruno Silva",
     "Claudio Padilha",
     "Elder Moreira",
+    "Edriel Chagas",
     
     
     // "Romulo Rocha",
     // "Romulo Rocha",
     // "Leandro Pedro",
     // "Noaman Miranda",
-    // "Edriel Chagas",
     // "Tenten Souza",
     // "Tenten Souza",
     // "Tenten Souza",
