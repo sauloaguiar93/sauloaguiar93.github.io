@@ -38,6 +38,9 @@ const participantes = [
     "Claudio Padilha",
     "Elder Moreira",
     "Edriel Chagas",
+    "Renato Souza",
+    "Naldo Souza",
+    "Wander Melo",
     
     
     // "Romulo Rocha",
@@ -48,9 +51,6 @@ const participantes = [
     // "Tenten Souza",
     // "Tenten Souza",
     // "Kleber Cruz",
-    // "Wanderson Brito",
-    // "Wander Melo",
-    // "Naldo Souza",
     // "Levi Chagas",
     // "Levi Chagas",
     // "Reginaldo Sales",
