@@ -16,6 +16,10 @@ const participantes = [
     "Marcus Né",
     "Reginaldo Sales",
     "Edbruno Silva",
+    "Romero Santana",
+    "Elder Thiago",
+    "Valdemir Galiza",
+    "Thiago Melo",
   ];
 
   function displayParticipants() {
