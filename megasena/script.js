@@ -43,13 +43,13 @@ const participantes = [
     "Claudio Padilha",
     "Suely Aguiar",
     "Raimundo Aguiar",
+    "Saulo Aguiar",
+    "Saulo Aguiar",
     
     
     // "Jean Souza",
     // "Pedro Souza",
     // "Fabricio Pereira",
-    // "Saulo Aguiar",
-    // "Saulo Aguiar",
     // "Jonathan Diegi",
     // "Naldo Souza",
     // "Kleber Cruz",
