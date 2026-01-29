@@ -1,15 +1,15 @@
 // Jogos previamente cadastrados
 const participantes = [
-    "Saulo Aguiar",
+    "Ronaldo Souza",
+    "Ronaldo Souza",
     "Rafaella Nascimento",
-    "Ronaldo Souza",
-    "Ronaldo Souza",
-    "Suely Aguiar",
-    "Raimundo Aguiar",
     "Sara Aguiar",
     "Lelis Aguiar",
+    "Suely Aguiar",
+    "Raimundo Aguiar",
     "Ilailson Rocha",
     "Rennan Brito",
+    "Saulo Aguiar",
   ];
 
   function displayParticipants() {
