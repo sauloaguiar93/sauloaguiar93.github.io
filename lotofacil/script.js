@@ -5,12 +5,12 @@ const participantes = [
     "Rafaella Nascimento",
     "Sara Aguiar",
     "Lelis Aguiar",
+    "Jedson Cardoso",
     "Suely Aguiar",
     "Raimundo Aguiar",
     "Ilailson Rocha",
     "Rennan Brito",
     "Saulo Aguiar",
-    "Jedson Cardoso",
   ];
 
   function displayParticipants() {
