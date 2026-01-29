@@ -11,6 +11,7 @@ const participantes = [
     "Ilailson Rocha",
     "Rennan Brito",
     "Saulo Aguiar",
+    "Hary Daniel",
   ];
 
   function displayParticipants() {
