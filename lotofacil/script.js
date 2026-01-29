@@ -20,6 +20,9 @@ const participantes = [
     "Elder Thiago",
     "Valdemir Galiza",
     "Thiago Melo",
+    "Carolina Costa",
+    "Claudia Albuquerque",
+    "Mayco Dias",
   ];
 
   function displayParticipants() {
