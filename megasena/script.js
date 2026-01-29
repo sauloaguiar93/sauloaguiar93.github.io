@@ -28,6 +28,7 @@ const participantes = [
     "Rennan Brito",
     "Waldiney Barros",
     "Claudia Albuquerque",
+    "Renato Souza",
     
     
     // "Hary Daniel",
@@ -45,7 +46,6 @@ const participantes = [
     // "André Melo",
     // "Edbruno Silva",
     // "Claudio Padilha",
-    // "Renato Souza",
     // "Naldo Souza",
     // "Wander Melo",
     // "Kleber Cruz",
