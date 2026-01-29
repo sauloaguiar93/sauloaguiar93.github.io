@@ -11,6 +11,7 @@ const participantes = [
     "Ilailson Rocha",
     "Rennan Brito",
     "Saulo Aguiar",
+    "Saulo Aguiar",
     "Hary Daniel",
     "Marcos Almeida",
     "Marcus Né",
@@ -23,6 +24,8 @@ const participantes = [
     "Carolina Costa",
     "Claudia Albuquerque",
     "Mayco Dias",
+    "Roberto Mendes",
+    "Wanderson Pamplona",
   ];
 
   function displayParticipants() {
