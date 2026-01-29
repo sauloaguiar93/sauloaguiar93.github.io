@@ -36,6 +36,11 @@ const participantes = [
     "Roberto Mendes",
     "Wander Melo",
     "Edbruno Silva",
+    "André Melo",
+    "Tenten Souza",
+    "Tenten Souza",
+    "Leandro Freitas",
+    
     
     // "Suely Aguiar",
     // "Raimundo Aguiar",
@@ -45,15 +50,12 @@ const participantes = [
     // "Saulo Aguiar",
     // "Saulo Aguiar",
     // "Jonathan Diegi",
-    // "André Melo",
     // "Claudio Padilha",
     // "Naldo Souza",
     // "Kleber Cruz",
     // "Marcos Almeida",
     // "Kelly Gomes",
     // "Adenilson Lopes",
-    // "Tenten Souza",
-    // "Tenten Souza",
     // "Noaman Miranda",
   ];
 
