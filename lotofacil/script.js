@@ -14,6 +14,7 @@ const participantes = [
     "Hary Daniel",
     "Marcos Almeida",
     "Marcus Né",
+    "Reginaldo Sales",
     "Edbruno Silva",
   ];
 
