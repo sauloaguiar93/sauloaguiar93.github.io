@@ -21,7 +21,7 @@ const participantes = [
     "Rafaella Nascimento",
     "Carolina Costa",
     "Jedson Cardoso",
-    "Jedson Cardoso",
+    "Pedro Souza",
     "Sara Aguiar",
     "José Cunha",
     "Elder Moreira",
@@ -46,17 +46,6 @@ const participantes = [
     "Jean Souza",
     "Saulo Aguiar",
     "Saulo Aguiar",
-    
-    
-    // "Pedro Souza",
-    // "Fabricio Pereira",
-    // "Jonathan Diegi",
-    // "Naldo Souza",
-    // "Kleber Cruz",
-    // "Marcos Almeida",
-    // "Kelly Gomes",
-    // "Adenilson Lopes",
-    // "Noaman Miranda",
   ];
 
   function displayParticipants() {
