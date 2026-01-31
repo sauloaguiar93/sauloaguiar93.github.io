@@ -49,12 +49,10 @@ const participantes = [
     "Hary Daniel",
     "Jedson Cardoso",
     "Jedson Cardoso",
-    // "José Cunha",
-    // "Leandro Pedro",
     // "Edbruno Silva",
     // "Claudio Padilha",
-    // "Saulo Aguiar",
-    // "Saulo Aguiar",
+    "Saulo Aguiar",
+    "Saulo Aguiar",
   ];
 
   function displayParticipants() {
