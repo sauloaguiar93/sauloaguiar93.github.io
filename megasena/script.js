@@ -39,7 +39,7 @@ const participantes = [
     "Tenten Souza",
     "Tenten Souza",
     "Rennan Brito",
-    // "Ilailson Rocha",
+    "Ilailson Rocha",
     // "Romulo Kleber",
     // "Romulo Kleber",
     // "Jedson Cardoso",
