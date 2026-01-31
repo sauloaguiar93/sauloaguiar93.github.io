@@ -49,8 +49,7 @@ const participantes = [
     "Hary Daniel",
     "Jedson Cardoso",
     "Jedson Cardoso",
-    // "Edbruno Silva",
-    // "Claudio Padilha",
+    "Claudio Padilha",
     "Saulo Aguiar",
     "Saulo Aguiar",
   ];
