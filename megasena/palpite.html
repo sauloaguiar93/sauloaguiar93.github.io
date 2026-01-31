@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio 1 a 60</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f2f5; margin: 0; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 400px; width: 100%; }
+        h2 { text-align: center; color: #333; }
+        
+        .input-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+
+        /* Grade de números */
+        .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; margin-bottom: 20px; }
+        .num-btn {
+            padding: 10px 0; background: #eee; border: none; border-radius: 50%; cursor: pointer; font-weight: bold;
+            transition: 0.2s; aspect-ratio: 1; /* Mantém redondo */
+        }
+        .num-btn:hover { background: #ddd; }
+        .num-btn.selected { background: #28a745; color: white; transform: scale(1.1); }
+        
+        button#enviar { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+        button#enviar:disabled { background: #ccc; cursor: not-allowed; }
+        
+        .status { text-align: center; margin-top: 10px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Faça seu Jogo</h2>
+    <form name="submit-to-google-sheet">
+        <div class="input-group">
+            <label>Seu Nome:</label>
+            <input type="text" name="nome" required placeholder="Digite seu nome completo">
+        </div>
+
+        <div class="input-group">
+            <label>Escolha 6 números:</label>
+            <div class="grid" id="numberGrid">
+                </div>
+            <div style="text-align: center; margin-bottom: 10px; color: #666;">
+                Selecionados: <span id="count">0</span>/6
+            </div>
+        </div>
+
+        <input type="hidden" name="numeros" id="numerosInput">
+
+        <button type="submit" id="enviar">Enviar Aposta</button>
+        <div class="status" id="statusMessage"></div>
+    </form>
+</div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbygIBG4W51tebOQEp1wzOe0iobj8erpHigKf2zKAB8Nn_w9rPZczXh0CE-zWQJ5fg/exec'; // <--- COLOQUE SUA URL AQUI
+    const form = document.forms['submit-to-google-sheet'];
+    const grid = document.getElementById('numberGrid');
+    const countSpan = document.getElementById('count');
+    const numerosInput = document.getElementById('numerosInput');
+    const statusMsg = document.getElementById('statusMessage');
+    const btnEnviar = document.getElementById('enviar');
+
+    let selecionados = [];
+
+    // 1. Gera os botões de 1 a 60
+    for (let i = 1; i <= 60; i++) {
+        let btn = document.createElement('button');
+        btn.type = 'button'; // Importante para não submeter o form ao clicar
+        btn.className = 'num-btn';
+        btn.innerText = i;
+        btn.onclick = () => toggleNumero(i, btn);
+        grid.appendChild(btn);
+    }
+
+    // 2. Lógica de Seleção
+    function toggleNumero(num, btn) {
+        if (selecionados.includes(num)) {
+            // Se já tem, remove
+            selecionados = selecionados.filter(n => n !== num);
+            btn.classList.remove('selected');
+        } else {
+            // Se não tem, verifica se já atingiu o limite de 6
+            if (selecionados.length >= 6) {
+                alert("Você só pode escolher 6 números!");
+                return;
+            }
+            selecionados.push(num);
+            btn.classList.add('selected');
+        }
+        atualizarInterface();
+    }
+
+    function atualizarInterface() {
+        countSpan.innerText = selecionados.length;
+        // Ordena os números e coloca no input oculto para envio
+        numerosInput.value = selecionados.sort((a,b) => a-b).join(', ');
+    }
+
+    // 3. Envio para o Google Sheets
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        
+        if (selecionados.length !== 6) {
+            alert("Por favor, selecione exatamente 6 números.");
+            return;
+        }
+
+        btnEnviar.disabled = true;
+        btnEnviar.innerText = "Enviando...";
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                statusMsg.innerText = "Sucesso! Seus números foram salvos.";
+                statusMsg.style.color = "green";
+                btnEnviar.innerText = "Enviado!";
+                // Opcional: Limpar formulário
+                // form.reset(); 
+                // selecionados = [];
+                // atualizarInterface();
+                // document.querySelectorAll('.selected').forEach(b => b.classList.remove('selected'));
+            })
+            .catch(error => {
+                statusMsg.innerText = "Erro ao enviar. Tente novamente.";
+                statusMsg.style.color = "red";
+                btnEnviar.disabled = false;
+                console.error('Erro!', error.message);
+            });
+    });
+</script>
+
+</body>
+</html>
