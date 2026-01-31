@@ -1,326 +1,236 @@
-<!-- <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorteio 1 a 60</title>
-    <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f2f5; margin: 0; }
-        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 400px; width: 100%; }
-        h2 { text-align: center; color: #333; }
-        
-        .input-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
-
-        /* Grade de números */
-        .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; margin-bottom: 20px; }
-        .num-btn {
-            padding: 10px 0; background: #eee; border: none; border-radius: 50%; cursor: pointer; font-weight: bold;
-            transition: 0.2s; aspect-ratio: 1; /* Mantém redondo */
-        }
-        .num-btn:hover { background: #ddd; }
-        .num-btn.selected { background: #28a745; color: white; transform: scale(1.1); }
-        
-        button#enviar { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
-        button#enviar:disabled { background: #ccc; cursor: not-allowed; }
-        
-        .status { text-align: center; margin-top: 10px; font-size: 0.9em; }
-    </style>
-</head>
-<body>
-
-<div class="card">
-    <h2>Faça seu Jogo</h2>
-    <form name="submit-to-google-sheet">
-        <div class="input-group">
-            <label>Seu Nome:</label>
-            <input type="text" name="nome" required placeholder="Digite seu nome completo">
-        </div>
-
-        <div class="input-group">
-            <label>Escolha 6 números:</label>
-            <div class="grid" id="numberGrid">
-                </div>
-            <div style="text-align: center; margin-bottom: 10px; color: #666;">
-                Selecionados: <span id="count">0</span>/6
-            </div>
-        </div>
-
-        <input type="hidden" name="numeros" id="numerosInput">
-
-        <button type="submit" id="enviar">Enviar Aposta</button>
-        <div class="status" id="statusMessage"></div>
-    </form>
-</div>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbygIBG4W51tebOQEp1wzOe0iobj8erpHigKf2zKAB8Nn_w9rPZczXh0CE-zWQJ5fg/exec'; // <--- COLOQUE SUA URL AQUI
-    const form = document.forms['submit-to-google-sheet'];
-    const grid = document.getElementById('numberGrid');
-    const countSpan = document.getElementById('count');
-    const numerosInput = document.getElementById('numerosInput');
-    const statusMsg = document.getElementById('statusMessage');
-    const btnEnviar = document.getElementById('enviar');
-
-    let selecionados = [];
-
-    // 1. Gera os botões de 1 a 60
-    for (let i = 1; i <= 60; i++) {
-        let btn = document.createElement('button');
-        btn.type = 'button'; // Importante para não submeter o form ao clicar
-        btn.className = 'num-btn';
-        btn.innerText = i;
-        btn.onclick = () => toggleNumero(i, btn);
-        grid.appendChild(btn);
-    }
-
-    // 2. Lógica de Seleção
-    function toggleNumero(num, btn) {
-        if (selecionados.includes(num)) {
-            // Se já tem, remove
-            selecionados = selecionados.filter(n => n !== num);
-            btn.classList.remove('selected');
-        } else {
-            // Se não tem, verifica se já atingiu o limite de 6
-            if (selecionados.length >= 6) {
-                alert("Você só pode escolher 6 números!");
-                return;
-            }
-            selecionados.push(num);
-            btn.classList.add('selected');
-        }
-        atualizarInterface();
-    }
-
-    function atualizarInterface() {
-        countSpan.innerText = selecionados.length;
-        // Ordena os números e coloca no input oculto para envio
-        numerosInput.value = selecionados.sort((a,b) => a-b).join(', ');
-    }
-
-    // 3. Envio para o Google Sheets
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        
-        if (selecionados.length !== 6) {
-            alert("Por favor, selecione exatamente 6 números.");
-            return;
-        }
-
-        btnEnviar.disabled = true;
-        btnEnviar.innerText = "Enviando...";
-
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                statusMsg.innerText = "Sucesso! Seus números foram salvos.";
-                statusMsg.style.color = "green";
-                btnEnviar.innerText = "Enviado!";
-                // Opcional: Limpar formulário
-                // form.reset(); 
-                // selecionados = [];
-                // atualizarInterface();
-                // document.querySelectorAll('.selected').forEach(b => b.classList.remove('selected'));
-            })
-            .catch(error => {
-                statusMsg.innerText = "Erro ao enviar. Tente novamente.";
-                statusMsg.style.color = "red";
-                btnEnviar.disabled = false;
-                console.error('Erro!', error.message);
-            });
-    });
-</script>
-
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorteio 1 a 60</title>
+    <title>Bolão Dinâmico</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f2f5; margin: 0; }
-        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 400px; width: 100%; }
-        h2 { text-align: center; color: #333; margin-top: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f8; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; }
         
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        
+        h2 { text-align: center; color: #2c3e50; margin-top: 0; }
+        h4 { margin: 10px 0 5px; color: #555; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+
         .input-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
+        input[type="text"], input[type="number"] { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; font-size: 16px; }
 
-        /* Grade de números */
-        .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; margin-bottom: 20px; }
-        .num-btn {
-            padding: 10px 0; background: #eee; border: none; border-radius: 50%; cursor: pointer; font-weight: bold;
-            transition: 0.2s; aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+        /* Estilo das Cartelas Geradas */
+        .game-card { background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 15px; position: relative; }
+        .game-title { font-weight: bold; color: #007bff; margin-bottom: 10px; display: block; }
+        
+        .grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; }
+        
+        /* Ajuste para celular: botões menores */
+        @media (max-width: 500px) {
+            .grid { grid-template-columns: repeat(6, 1fr); }
         }
-        .num-btn:hover { background: #ddd; }
-        .num-btn.selected { background: #28a745; color: white; transform: scale(1.1); box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        
-        /* Área dos Botões */
-        .action-buttons { display: flex; gap: 10px; }
-        
-        button { flex: 1; padding: 12px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; font-weight: bold; }
-        
-        button#enviar { background: #007bff; color: white; }
-        button#enviar:hover { background: #0069d9; }
-        button#enviar:disabled { background: #ccc; cursor: not-allowed; }
 
-        button#limpar { background: #6c757d; color: white; }
-        button#limpar:hover { background: #5a6268; }
+        .num-btn {
+            padding: 8px 0; background: #fff; border: 1px solid #ccc; border-radius: 4px; 
+            cursor: pointer; font-size: 14px; transition: 0.2s;
+        }
+        .num-btn:hover { background: #eee; }
+        .num-btn.selected { background: #28a745; color: white; border-color: #28a745; font-weight: bold; }
         
-        .status { text-align: center; margin-top: 15px; font-size: 0.9em; min-height: 20px; }
+        .status-count { text-align: right; font-size: 0.8em; color: #666; margin-top: 5px; }
+
+        .action-buttons { display: flex; gap: 10px; margin-top: 20px; }
+        button { flex: 1; padding: 15px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; font-weight: bold; color: white; transition: 0.3s; }
+        
+        #btn-gerar { background: #17a2b8; margin-top: 10px; width: 100%; }
+        #enviar { background: #007bff; }
+        #enviar:disabled { background: #ccc; }
+        #limpar { background: #6c757d; }
+        
+        #statusMessage { text-align: center; margin-top: 15px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <h2>Faça seu Jogo</h2>
-    <form name="submit-to-google-sheet">
-        <div class="input-group">
-            <label>Seu Nome:</label>
-            <input type="text" name="nome" id="inputNome" required placeholder="Digite seu nome completo">
-        </div>
-
-        <div class="input-group">
-            <label>Escolha 6 números:</label>
-            <div class="grid" id="numberGrid">
-                </div>
-            <div style="text-align: center; margin-bottom: 5px; color: #666;">
-                Selecionados: <strong id="count">0</strong>/6
+<div class="container">
+    <div class="card">
+        <h2>Bolão da Sorte</h2>
+        <form name="submit-to-google-sheet">
+            
+            <div class="input-group">
+                <label>Seu Nome:</label>
+                <input type="text" name="nome" id="inputNome" required placeholder="Ex: João Silva">
             </div>
-        </div>
 
-        <input type="hidden" name="numeros" id="numerosInput">
+            <div class="input-group">
+                <label>Quantas Cotas você quer?</label>
+                <small style="color: #666; display: block; margin-bottom: 5px;">(Cada cota = 2 jogos de 6 números)</small>
+                <input type="number" name="cotas" id="inputCotas" min="1" max="10" value="1" required>
+                <button type="button" id="btn-gerar">Gerar Cartelas</button>
+            </div>
 
-        <div class="action-buttons">
-            <button type="button" id="limpar">Limpar</button>
-            <button type="submit" id="enviar">Enviar</button>
-        </div>
-        
-        <div class="status" id="statusMessage"></div>
-    </form>
+            <div id="games-container"></div>
+
+            <input type="hidden" name="numeros" id="numerosInput">
+
+            <div class="action-buttons" style="display:none;" id="footer-buttons">
+                <button type="button" id="limpar">Limpar Tudo</button>
+                <button type="submit" id="enviar">Enviar Jogos</button>
+            </div>
+            
+            <div id="statusMessage"></div>
+        </form>
+    </div>
 </div>
 
 <script>
-    // ==========================================================
-    // COLE SUA URL DO GOOGLE APPS SCRIPT ABAIXO (DENTRO DAS ASPAS)
+    // ==========================================
     const scriptURL = 'https://script.google.com/macros/s/AKfycbygIBG4W51tebOQEp1wzOe0iobj8erpHigKf2zKAB8Nn_w9rPZczXh0CE-zWQJ5fg/exec'; 
-    // ==========================================================
+    // ==========================================
 
     const form = document.forms['submit-to-google-sheet'];
-    const grid = document.getElementById('numberGrid');
-    const countSpan = document.getElementById('count');
+    const container = document.getElementById('games-container');
+    const inputCotas = document.getElementById('inputCotas');
+    const btnGerar = document.getElementById('btn-gerar');
+    const footerBtns = document.getElementById('footer-buttons');
     const numerosInput = document.getElementById('numerosInput');
     const statusMsg = document.getElementById('statusMessage');
     const btnEnviar = document.getElementById('enviar');
-    const btnLimpar = document.getElementById('limpar');
-    const inputNome = document.getElementById('inputNome');
 
-    let selecionados = [];
+    // Armazena os jogos: { 0: [1,2..], 1: [5,6..] }
+    let jogosDB = {}; 
+    let totalJogosEsperados = 0;
 
-    // 1. Gera os botões de 1 a 60
-    for (let i = 1; i <= 60; i++) {
-        let btn = document.createElement('button');
-        btn.type = 'button'; 
-        btn.className = 'num-btn';
-        btn.innerText = i;
-        btn.id = 'btn-' + i; // ID para facilitar a limpeza visual
-        btn.onclick = () => toggleNumero(i, btn);
-        grid.appendChild(btn);
-    }
-
-    // 2. Lógica de Seleção
-    function toggleNumero(num, btn) {
-        if (selecionados.includes(num)) {
-            selecionados = selecionados.filter(n => n !== num);
-            btn.classList.remove('selected');
-        } else {
-            if (selecionados.length >= 6) {
-                alert("Você só pode escolher 6 números!");
-                return;
-            }
-            selecionados.push(num);
-            btn.classList.add('selected');
-        }
-        atualizarInterface();
-    }
-
-    function atualizarInterface() {
-        countSpan.innerText = selecionados.length;
-        numerosInput.value = selecionados.sort((a,b) => a-b).join(', ');
-        
-        // Muda a cor do contador se estiver completo
-        if(selecionados.length === 6) {
-            countSpan.style.color = "green";
-        } else {
-            countSpan.style.color = "black";
-        }
-    }
-
-    // 3. Função para Limpar Tudo (Reset)
-    function limparFormulario() {
-        // Limpa array de logica
-        selecionados = [];
-        
-        // Limpa inputs de texto
-        inputNome.value = "";
-        numerosInput.value = "";
-        
-        // Remove classe visual 'selected' de todos os botões
-        document.querySelectorAll('.num-btn').forEach(btn => {
-            btn.classList.remove('selected');
-        });
-        
-        // Reseta interface e botões
-        atualizarInterface();
-        btnEnviar.disabled = false;
-        btnEnviar.innerText = "Enviar";
-    }
-
-    // Ação do botão Limpar
-    btnLimpar.addEventListener('click', () => {
-        limparFormulario();
-        statusMsg.innerText = "Formulário limpo.";
-        statusMsg.style.color = "#666";
-        setTimeout(() => { statusMsg.innerText = ""; }, 2000);
-    });
-
-    // 4. Envio para o Google Sheets
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        
-        if (selecionados.length !== 6) {
-            alert("Por favor, selecione exatamente 6 números.");
+    // 1. Função para Gerar as Cartelas
+    btnGerar.addEventListener('click', () => {
+        const qtdCotas = parseInt(inputCotas.value);
+        if(!qtdCotas || qtdCotas < 1) {
+            alert("Digite pelo menos 1 cota.");
             return;
         }
 
+        totalJogosEsperados = qtdCotas * 2;
+        container.innerHTML = ""; // Limpa cartelas anteriores
+        jogosDB = {}; // Reseta memória dos jogos
+
+        // Cria X jogos
+        for(let i = 0; i < totalJogosEsperados; i++) {
+            criarCartelaHTML(i);
+        }
+
+        footerBtns.style.display = "flex"; // Mostra botão de enviar
+        statusMsg.innerText = `Preencha os ${totalJogosEsperados} jogos abaixo.`;
+        statusMsg.style.color = "#007bff";
+    });
+
+    function criarCartelaHTML(index) {
+        // Estrutura do Card do Jogo
+        const card = document.createElement('div');
+        card.className = 'game-card';
+        
+        const titulo = document.createElement('span');
+        titulo.className = 'game-title';
+        titulo.innerText = `Jogo #${index + 1}`;
+        card.appendChild(titulo);
+
+        const grid = document.createElement('div');
+        grid.className = 'grid';
+
+        // Cria botões de 1 a 60
+        for (let n = 1; n <= 60; n++) {
+            let btn = document.createElement('div');
+            btn.className = 'num-btn';
+            btn.innerText = n;
+            // Evento de clique passando o ID do jogo (index) e o numero (n)
+            btn.onclick = () => toggleNumero(index, n, btn, countDisplay);
+            grid.appendChild(btn);
+        }
+        
+        const countDisplay = document.createElement('div');
+        countDisplay.className = 'status-count';
+        countDisplay.innerText = '0/6 selecionados';
+
+        card.appendChild(grid);
+        card.appendChild(countDisplay);
+        container.appendChild(card);
+    }
+
+    // 2. Lógica de Seleção (Individual por jogo)
+    function toggleNumero(gameIndex, num, btnElement, displayElement) {
+        // Se ainda não existe array pra esse jogo, cria
+        if (!jogosDB[gameIndex]) jogosDB[gameIndex] = [];
+
+        let selecionados = jogosDB[gameIndex];
+
+        if (selecionados.includes(num)) {
+            // Remover
+            selecionados = selecionados.filter(n => n !== num);
+            btnElement.classList.remove('selected');
+        } else {
+            // Adicionar (se não tiver 6)
+            if (selecionados.length >= 6) {
+                alert(`O Jogo #${gameIndex + 1} já tem 6 números!`);
+                return;
+            }
+            selecionados.push(num);
+            btnElement.classList.add('selected');
+        }
+
+        // Atualiza a memória global
+        jogosDB[gameIndex] = selecionados;
+        
+        // Atualiza texto visual
+        displayElement.innerText = `${selecionados.length}/6 selecionados`;
+        displayElement.style.color = selecionados.length === 6 ? "green" : "#666";
+    }
+
+    // 3. Validação e Envio
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        // Verifica se TODOS os jogos têm 6 números
+        let jogosFormatados = [];
+        
+        for(let i = 0; i < totalJogosEsperados; i++) {
+            let nums = jogosDB[i] || [];
+            if (nums.length !== 6) {
+                alert(`Atenção: O Jogo #${i+1} está incompleto! Preencha 6 números.`);
+                return; // Para o envio
+            }
+            // Ordena e formata: "[1, 2, 3, 4, 5, 6]"
+            jogosFormatados.push(`Jogo ${i+1}: [` + nums.sort((a,b)=>a-b).join('-') + `]`);
+        }
+
+        // Coloca tudo numa string única para enviar pro Excel
+        numerosInput.value = jogosFormatados.join(' | ');
+
         btnEnviar.disabled = true;
         btnEnviar.innerText = "Enviando...";
-        statusMsg.innerText = "";
+        statusMsg.innerText = "Processando...";
 
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
-                statusMsg.innerText = "✅ Jogo salvo com sucesso!";
+                statusMsg.innerText = "✅ Jogos salvos com sucesso!";
                 statusMsg.style.color = "green";
-                
-                // LIMPEZA AUTOMÁTICA APÓS 2 SEGUNDOS
-                setTimeout(() => {
-                    limparFormulario();
-                    statusMsg.innerText = "Pronto para o próximo jogo.";
-                    setTimeout(() => { statusMsg.innerText = ""; }, 3000);
-                }, 2000);
+                setTimeout(() => { 
+                    // Reset Total
+                    location.reload(); 
+                }, 3000);
             })
             .catch(error => {
-                statusMsg.innerText = "❌ Erro ao enviar. Verifique a internet.";
-                statusMsg.style.color = "red";
+                statusMsg.innerText = "Erro ao enviar.";
                 btnEnviar.disabled = false;
-                btnEnviar.innerText = "Enviar";
-                console.error('Erro!', error.message);
             });
     });
-</script>
 
+    // Botão Limpar
+    document.getElementById('limpar').addEventListener('click', () => {
+        if(confirm("Deseja apagar todos os jogos preenchidos?")) {
+            container.innerHTML = "";
+            footerBtns.style.display = "none";
+            jogosDB = {};
+            statusMsg.innerText = "";
+        }
+    });
+
+</script>
 </body>
 </html>
