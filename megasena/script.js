@@ -37,18 +37,8 @@ const participantes = [
   "Romero Santana",
   "Reginaldo Sales",
   "EdBruno Silva",
-    // "Paulo Victor",
-    // "Reginaldo Souza",
-    // "Leandro Freitas",
-    // "Renato Souza",
-    // "Pedro Souza",
-    // "Naldo Souza",
-    // "Naldo Souza",
-    // "Waldiney Barros",
-    // "Jean Souza",
-    // "Claudio Padilha",
-    // "Saulo Aguiar",
-    // "Saulo Aguiar",
+  "Saulo Aguiar",
+  "Saulo Aguiar",
   ];
 
   function displayParticipants() {
