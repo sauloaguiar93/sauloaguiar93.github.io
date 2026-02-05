@@ -24,6 +24,7 @@ const participantes = [
   "Pedro Souza",
   "Suely Aguiar",
   "Raimundo Aguiar",
+  "Marcos Almeida",
   
   // "Fabricio Pereira",
   // "Marcus Né",
@@ -39,7 +40,6 @@ const participantes = [
   // "Claudia Albuquerque",
   // "Wander Melo",
   // "Marcia Santos",
-  // "Marcos Almeida",
   // "Romero Santana",
   // "Reginaldo Sales",
   // "EdBruno Silva",
