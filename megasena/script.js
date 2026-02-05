@@ -25,9 +25,10 @@ const participantes = [
   "Suely Aguiar",
   "Raimundo Aguiar",
   "Marcos Almeida",
+  "Marcus Né",
+  "Naldo Souza",
   
   // "Fabricio Pereira",
-  // "Marcus Né",
   // "Romulo Kleber",
   // "Romulo Kleber",
   // "Gilson Clê",
