@@ -39,12 +39,12 @@ const participantes = [
   "Wander Melo",
   "EdBruno Silva",
   "Reginaldo Sales",
+  "Romulo Kleber",
+  "Romulo Kleber",
   "Saulo Aguiar",
   "Saulo Aguiar",
   
   // "Fabricio Pereira",
-  // "Romulo Kleber",
-  // "Romulo Kleber",
   // "Gilson Clê",
   // "Mayco Dias",
   ];
