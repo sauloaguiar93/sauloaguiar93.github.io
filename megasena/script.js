@@ -36,6 +36,9 @@ const participantes = [
   "Claudia Albuquerque",
   "Claudio Padilha",
   "Carolina Costa",
+  "Reginaldo Sales",
+  "Saulo Aguiar",
+  "Saulo Aguiar",
   
   // "Fabricio Pereira",
   // "Romulo Kleber",
@@ -43,10 +46,7 @@ const participantes = [
   // "Gilson Clê",
   // "Mayco Dias",
   // "Wander Melo",
-  // "Reginaldo Sales",
   // "EdBruno Silva",
-  // "Saulo Aguiar",
-  // "Saulo Aguiar",
   ];
 
   function displayParticipants() {
