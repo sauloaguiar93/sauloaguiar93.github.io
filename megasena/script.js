@@ -13,7 +13,7 @@ const participantes = [
   "Maia Carla",
   "Hary Daniel",
   "Hary Daniel",
-  // "Wanderson Brito",
+  "Wanderson Brito",
   // "Fabricio Pereira",
   // "Marcus Né",
   // "Romulo Kleber",
