@@ -31,6 +31,8 @@ const participantes = [
   "Elder Moreira",
   "Suely Aguiar",
   "Raimundo Aguiar",
+  "Saulo Aguiar",
+  "Saulo Aguiar",
   
   // "Renato Souza",
   // "Maia Carla",
@@ -47,8 +49,6 @@ const participantes = [
   // "EdBruno Silva",
   // "Romulo Kleber",
   // "Romulo Kleber",
-  // "Saulo Aguiar",
-  // "Saulo Aguiar",
   // "Fabricio Pereira",
   ];
 
