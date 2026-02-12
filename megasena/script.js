@@ -33,10 +33,10 @@ const participantes = [
   "Tenten Souza",
   "Elder Moreira",
   "Marcia Santos",
+  "Paulo Victor",
   "Saulo Aguiar",
   "Saulo Aguiar",
   
-  // "Paulo Victor",
   // "Edbruno Silva",
   // "Romero Santana",
   // "Gilson Clê",
