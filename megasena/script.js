@@ -18,6 +18,8 @@ const participantes = [
   "Mayco Dias",
   "Fabiano Paz",
   "Roberto Mendes",
+  "Saulo Aguiar",
+  "Saulo Aguiar",
 
   
   // "Jedson Cardoso",
@@ -42,8 +44,6 @@ const participantes = [
   // "Tenten Souza",
   // "Elder Moreira",
   // "Paulo Victor",
-  // "Saulo Aguiar",
-  // "Saulo Aguiar",
   
   // "Edbruno Silva",
   // "Marcos Almeida",
