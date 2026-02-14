@@ -24,8 +24,7 @@ const participantes = [
   "Claudia Albuquerque",
   "Ronaldo Souza",
   "Ronaldo Souza",
-  // "Saulo Aguiar",
-  // "Saulo Aguiar",
+  "Saulo Aguiar",
 
   
   // "Jedson Cardoso",
