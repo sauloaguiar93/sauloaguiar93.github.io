@@ -34,12 +34,12 @@ const participantes = [
   "Pedro Souza",
   "Maria Do Carmo",
   "Wander Melo",
+  "Sara Aguiar",
   // "Nonata Souza",
   // "Waldiney Barros",
   // "Leandro Pedro",
   // "Kleber Cruz",
   // "Roberto Mendes",
-  // "Sara Aguiar",
   // "Tenten Souza",
   // "Tenten Souza",
 
