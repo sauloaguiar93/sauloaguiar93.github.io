@@ -25,17 +25,16 @@ const participantes = [
   "Ronaldo Souza",
   "Ronaldo Souza",
   "Saulo Aguiar",
+  "Suely Aguiar",
+  "Raimundo Aguiar",
+  "Reginaldo Sales",
 
-  
   // "Jedson Cardoso",
   // "Nonata Souza",
   // "Pedro Souza",
   // "Waldiney Barros",
   // "Leandro Pedro",
   // "Kleber Cruz",
-  // "Reginaldo Sales",
-  // "Suely Aguiar",
-  // "Raimundo Aguiar",
   // "Roberto Mendes",
   // "Ilailson Rocha",
   // "Sara Aguiar",
@@ -43,7 +42,6 @@ const participantes = [
   // "Tenten Souza",
   // "Elder Moreira",
   // "Paulo Victor",
-  
   // "Edbruno Silva",
   // "Marcos Almeida",
   // "Naldo Souza",
