@@ -33,6 +33,7 @@ const participantes = [
   "Jedson Cardoso",
   "Pedro Souza",
   "Maria Do Carmo",
+  "Wander Melo",
   // "Nonata Souza",
   // "Waldiney Barros",
   // "Leandro Pedro",
@@ -47,7 +48,6 @@ const participantes = [
   // "Marcos Almeida",
   // "Naldo Souza",
   // "André Melo",
-  // "Wander Melo",
   // "EdBruno Silva",
   // "Fabricio Pereira",
   ];
