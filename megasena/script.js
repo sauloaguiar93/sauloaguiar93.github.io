@@ -28,7 +28,7 @@ const participantes = [
   "Suely Aguiar",
   "Raimundo Aguiar",
   "Reginaldo Sales",
-
+  "Elder Moreira",
   // "Jedson Cardoso",
   // "Nonata Souza",
   // "Pedro Souza",
@@ -40,7 +40,7 @@ const participantes = [
   // "Sara Aguiar",
   // "Tenten Souza",
   // "Tenten Souza",
-  // "Elder Moreira",
+
   // "Paulo Victor",
   // "Edbruno Silva",
   // "Marcos Almeida",
@@ -48,7 +48,6 @@ const participantes = [
   // "André Melo",
   // "Wander Melo",
   // "EdBruno Silva",
-
   // "Fabricio Pereira",
   ];
 
