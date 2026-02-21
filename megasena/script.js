@@ -27,6 +27,9 @@ const participantes = [
   "Hary Daniel",
   "Hary Daniel",
   "Maia Carla",
+  "Renato Souza",
+  "Mayco Dias",
+  
   // "Ilailson Rocha",
   // "Sara Aguiar",
   // "Gilson Clê",
@@ -34,7 +37,6 @@ const participantes = [
   // "Saulo Aguiar",
   // "Marcos Almeida",
   // "Wander Melo",
-  // "Mayco Dias",
   // "Fabiano Paz",
   // "Roberto Mendes",
   // "Maria Do Carmo",
