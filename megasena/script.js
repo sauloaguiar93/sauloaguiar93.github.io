@@ -35,15 +35,13 @@ const participantes = [
   "Nonata Souza",
   "Sara Aguiar",
   "André Melo",
+  "Ilailson Rocha",
+  "Saulo Aguiar",
   
-  // "Ilailson Rocha",
   // "Gilson Clê",
   // "Paulo Victor",
-  // "Saulo Aguiar",
   // "Wander Melo",
   // "Fabiano Paz",
-  // "Roberto Mendes",
-  // "Maria Do Carmo",
   // "Waldiney Barros",
   // "Leandro Pedro",
 
