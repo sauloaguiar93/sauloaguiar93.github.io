@@ -34,6 +34,7 @@ const participantes = [
   "Roberto Mendes",
   "Nonata Souza",
   "Sara Aguiar",
+  "André Melo",
   
   // "Ilailson Rocha",
   // "Gilson Clê",
@@ -48,7 +49,6 @@ const participantes = [
 
   // "Edbruno Silva",
   // "Naldo Souza",
-  // "André Melo",
   // "EdBruno Silva",
   // "Fabricio Pereira",
   ];
