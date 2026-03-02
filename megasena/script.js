@@ -10,7 +10,7 @@ const participantes = [
   "Wanderson Pamplona",
   "Romero Santana",
   "Claudio Padilha",
-  // "Rennan Brito",
+  "Rennan Brito",
   // "Ronaldo Souza",
   // "Ronaldo Souza",
   // "Reginaldo Sales",
