@@ -26,6 +26,7 @@ const participantes = [
   "Rafaella Nascimento",
   "Fabricio Pereira",
   "Edriel Chagas",
+  "Mayco Dias",
   "Jedson Cardoso",
   "Nonata Souza",
   "Pedro Souza",
