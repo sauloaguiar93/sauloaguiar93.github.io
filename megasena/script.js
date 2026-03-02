@@ -27,6 +27,7 @@ const participantes = [
   "Raimundo Aguiar",
   "Saulo Aguiar",
   "Rafaella Nascimento",
+  "Fabricio Pereira",
   // "Jedson Cardoso",
   // "Ilailson Rocha",
   // "Pedro Souza",
@@ -47,7 +48,6 @@ const participantes = [
   // "Waldiney Barros",
   // "Naldo Souza",
   // "EdBruno Silva",
-  // "Fabricio Pereira",
   ];
 
   function displayParticipants() {
