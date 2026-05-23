@@ -55,6 +55,7 @@ const participantes = [
   "Jean Souza",
   "Renato Souza",
   "Naldo Souza",
+  "Leandro Pedro",
   
   // "Mayco Dias",
   // "Kleber Cruz",
@@ -64,7 +65,6 @@ const participantes = [
   // "Maia Carla",
   // "Edbruno Silva",
   // "Paulo Victor",
-  // "Leandro Pedro",
   // "Renato Souza",
   // "André Melo",
   // "EdBruno Silva",
