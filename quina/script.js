@@ -13,6 +13,9 @@ const participantes = [
     "Wanderson Pamplona",
     "Sara Aguiar",
     "Saulo Aguiar",
+    "Claudio Padilha",
+    "Romero Santana",
+    "Reginaldo Sales",
   ];
 
   function displayParticipants() {
