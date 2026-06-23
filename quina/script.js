@@ -11,6 +11,8 @@ const participantes = [
     "Ronaldo Souza",
     "Ronaldo Souza",
     "Wanderson Pamplona",
+    "Sara Aguiar",
+    "Saulo Aguiar",
   ];
 
   function displayParticipants() {
