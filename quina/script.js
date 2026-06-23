@@ -22,6 +22,9 @@ const participantes = [
     "Roberto Mendes",
     "Waldiney Barros",
     "Carolina Costa",
+    "Jedson Cardoso",
+    "Suely Aguiar",
+    "Raimundo Aguiar",
   ];
 
   function displayParticipants() {
