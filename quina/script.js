@@ -22,6 +22,7 @@ const participantes = [
     "Roberto Mendes",
     "Waldiney Barros",
     "Carolina Costa",
+    "Fabiano Paz",
     "Jedson Cardoso",
     "Suely Aguiar",
     "Raimundo Aguiar",
