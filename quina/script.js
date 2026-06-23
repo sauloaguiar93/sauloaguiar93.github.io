@@ -6,6 +6,8 @@ const participantes = [
     "Thiago Melo",
     "Rennan Brito",
     "Rafaella Nascimento",
+    "Ilailson Rocha",
+    "Ilailson Rocha",
   ];
 
   function displayParticipants() {
