@@ -16,6 +16,12 @@ const participantes = [
     "Claudio Padilha",
     "Romero Santana",
     "Reginaldo Sales",
+    "Gilson Clê",
+    "Wander Melo",
+    "Jonathan Diego",
+    "Roberto Mendes",
+    "Waldiney Barros",
+    "Carolina Costa",
   ];
 
   function displayParticipants() {
