@@ -26,6 +26,7 @@ const participantes = [
     "Jedson Cardoso",
     "Suely Aguiar",
     "Raimundo Aguiar",
+    "Kelly Gomes",
   ];
 
   function displayParticipants() {
