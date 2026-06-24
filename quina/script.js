@@ -30,6 +30,7 @@ const participantes = [
     "Marcia Santos",
     "Rômulo Rocha",
     "Leandro Pedro",
+    "Marcus Né",
     "Sergio Bittencourt",
   ];
 
