@@ -37,7 +37,7 @@ const participantes = [
   function displayParticipants() {
     const participantsList = document.getElementById('participantsList');
     participantsList.innerHTML = '';
-    
+
     participantes.forEach(participante => {
       const li = document.createElement('li');
       li.className = 'list-group-item';
@@ -56,42 +56,44 @@ const jogos = [
   [03,05,13,25,40,51],
   [01,05,39,47,50,57],
 ];
-  
+
   function calculateTotal() {
     const participantsList = document.querySelectorAll('ol.list-group li');
     const amountPerPerson = 12;
     const totalAmount = participantsList.length * amountPerPerson;
-  
+
     document.getElementById('totalValue').textContent = `R$ ${totalAmount.toFixed(2)}`;
   }
-  
+
   const participantsModal = document.getElementById('participantsModal');
   participantsModal.addEventListener('shown.bs.modal', calculateTotal);
-  
+
   function displayGames() {
-    let gamesHTML = "<h3 class='mb-4'>Jogos Cadastrados:</h3>";
-  
+    let gamesHTML = "<h3 class='mb-4'>Jogos Cadastrados</h3>";
+
     jogos.forEach((jogo, index) => {
-      let jogoHTML = jogo.map(num => 
+      let jogoHTML = jogo.map(num =>
         `<span class="number">${num}</span>`
       ).join('');
-  
+
       gamesHTML += `
-        <div class="mb-3" id="jogo-${index}">
-          <strong>Jogo ${index + 1}:</strong> ${jogoHTML} 
-          <span class="badge bg-success" id="acertos-${index}">Acertos: 0</span>
+        <div class="game-card" id="jogo-${index}">
+          <div class="game-header">
+            <span class="game-title">Jogo ${index + 1}</span>
+            <span class="badge bg-success" id="acertos-${index}">Acertos: 0</span>
+          </div>
+          <div class="game-numbers">${jogoHTML}</div>
         </div>
       `;
     });
-  
+
     document.getElementById('gamesList').innerHTML = gamesHTML;
   }
-  
+
   function checkNumbers() {
     const drawnNumbers = document.getElementById('drawnNumbers').value.split(',').map(Number);
     const validDrawnNumbers = drawnNumbers.filter(num => !isNaN(num) && num > 0 && num <= 60);
-  
-    // Contadores para cada quantidade de acertos
+
     let acertos6 = 0;
     let acertos5 = 0;
     let acertos4 = 0;
@@ -99,21 +101,21 @@ const jogos = [
     let acertos2 = 0;
     jogos.forEach((jogo, index) => {
       const matchedNumbers = jogo.filter(num => validDrawnNumbers.includes(num));
-  
-      // Atualizar o HTML para destacar os números acertados
-      let jogoHTML = jogo.map(num => 
-        validDrawnNumbers.includes(num) 
-        ? `<span class="number matched">${num}</span>` 
+
+      let jogoHTML = jogo.map(num =>
+        validDrawnNumbers.includes(num)
+        ? `<span class="number matched">${num}</span>`
         : `<span class="number">${num}</span>`
       ).join('');
-  
-      // Atualizar o conteúdo do jogo e o número de acertos
+
       document.getElementById(`jogo-${index}`).innerHTML = `
-        <strong>Jogo ${index + 1}:</strong> ${jogoHTML} 
-        <span class="badge bg-success">Acertos: ${matchedNumbers.length}</span>
+        <div class="game-header">
+          <span class="game-title">Jogo ${index + 1}</span>
+          <span class="badge bg-success">Acertos: ${matchedNumbers.length}</span>
+        </div>
+        <div class="game-numbers">${jogoHTML}</div>
       `;
-  
-      // Contar os jogos com 11, 12, 13, 14, e 15 acertos
+
       switch (matchedNumbers.length) {
         case 6:
           acertos6++;
@@ -132,37 +134,49 @@ const jogos = [
           break;
       }
     });
-  
-    // Limpar resultados anteriores antes de adicionar novos
+
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
-      <div class="mt-3">
-        <strong>Quantidade de jogos com 6 acertos:</strong> ${acertos6}<br>
-        <strong>Quantidade de jogos com 5 acertos:</strong> ${acertos5}<br>
-        <strong>Quantidade de jogos com 4 acertos:</strong> ${acertos4}<br>
-        <strong>Quantidade de jogos com 3 acertos:</strong> ${acertos3}<br>
-        <strong>Quantidade de jogos com 2 acertos:</strong> ${acertos2}
+      <div class="results-card">
+        <div class="results-title">Resultado da Conferência</div>
+        <div class="result-row">
+          <span class="result-label">6 acertos</span>
+          <span class="result-value ${acertos6 > 0 ? 'highlight' : ''}">${acertos6}</span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">5 acertos</span>
+          <span class="result-value ${acertos5 > 0 ? 'highlight' : ''}">${acertos5}</span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">4 acertos</span>
+          <span class="result-value ${acertos4 > 0 ? 'highlight' : ''}">${acertos4}</span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">3 acertos</span>
+          <span class="result-value ${acertos3 > 0 ? 'highlight' : ''}">${acertos3}</span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">2 acertos</span>
+          <span class="result-value ${acertos2 > 0 ? 'highlight' : ''}">${acertos2}</span>
+        </div>
       </div>
     `;
   }
-  
-  
+
+
   document.getElementById("drawnNumbers").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
-      event.preventDefault();  // Impede o comportamento padrão de submit do formulário
-      checkNumbers();  // Chama a função de conferência
+      event.preventDefault();
+      checkNumbers();
     }
   });
 
-  // Evita cache do script
-// Desabilita cache do próprio script
-(function() {
+  (function() {
   const url = new URL(window.location.href);
   url.searchParams.set('_', Date.now());
   window.history.replaceState(null, '', url.toString());
 })();
-  
-// Exibir os jogos e participantes ao carregar a página
+
 window.onload = function() {
     displayGames();
     displayParticipants();

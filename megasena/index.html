@@ -9,15 +9,10 @@
   <script>
     (async () => {
       try {
-        // Baixa o próprio HTML novamente para gerar o hash
         const response = await fetch(window.location.href + '?t=' + Date.now());
         const text = await response.text();
-
-        // Gera um hash simples baseado no conteúdo
         const hash = btoa(unescape(encodeURIComponent(text))).substring(0, 20);
-
         const saved = localStorage.getItem('page_hash');
-
         if (saved !== hash) {
           localStorage.setItem('page_hash', hash);
           location.reload(true);
@@ -32,18 +27,13 @@
   <link rel="stylesheet" href="style.css?v=1">
 </head>
 <body>
-  <!-- <div class="container-fluid">
-    <button class="openbtn" onclick="openNav()">&#9776;</button>
-    <h3 id="topo" class="text-center mb-4 py-3 text-white">BOLÃO LOTOFÁCIL DA INDEPENDÊNCIA</h3>
-  </div> -->
   <div>
     <div class="header-container">
       <button class="openbtn" data-bs-toggle="modal" data-bs-target="#participantsModal">&#9776;</button>
-      <h3 class="text-white mb-0">BOLÃO DA MEGA - 300 MILHÕES</h3>
+      <h3>BOLÃO DA MEGA - 300 MILHÕES</h3>
     </div>
   </div>
 
-  <!-- Modal -->
   <div class="modal fade" id="participantsModal" tabindex="-1" aria-labelledby="participantsModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -66,14 +56,16 @@
     <form id="gameForm">
       <div class="row mb-3">
         <div class="col">
-          <label for="drawnNumbers" class="form-label">Números Sorteados (separe por vírgula):</label>
+          <label for="drawnNumbers" class="form-label">Números Sorteados</label>
           <input type="text" class="form-control" id="drawnNumbers" placeholder="Ex: 1, 2, 3, 4, 5, 6...">
         </div>
-        <div id="results" class="mt-3"></div>
+        <div id="results"></div>
       </div>
-      <button type="button" class="btn btn-secondary" onclick="checkNumbers()">Conferir</button> 
-      <a href="palpite.html" target="_blank" class="btn btn-success">Envie seu palpite</a>
-      <a href="ComprovanteBolao.pdf" target="_blank" class="btn btn-outline-success">Comprovante de pagamento</a>
+      <div class="btn-group-mobile">
+        <button type="button" class="btn btn-secondary" onclick="checkNumbers()">Conferir</button>
+        <a href="palpite.html" target="_blank" class="btn btn-outline-success">Envie seu palpite</a>
+        <a href="ComprovanteBolao.pdf" target="_blank" class="btn btn-outline-success">Comprovante de pagamento</a>
+      </div>
     </form>
     <div id="gamesList" class="mt-4"></div>
   </div>
