@@ -1,31 +1,5 @@
 // Jogos previamente cadastrados
 const participantes = [
-    "Ronaldo Souza",
-    "Ronaldo Souza",
-    "Rafaella Nascimento",
-    "Sara Aguiar",
-    "Lelis Aguiar",
-    "Jedson Cardoso",
-    "Suely Aguiar",
-    "Raimundo Aguiar",
-    "Ilailson Rocha",
-    "Rennan Brito",
-    "Saulo Aguiar",
-    "Saulo Aguiar",
-    "Hary Daniel",
-    "Marcos Almeida",
-    "Marcus Né",
-    "Reginaldo Sales",
-    "Edbruno Silva",
-    "Romero Santana",
-    "Elder Thiago",
-    "Valdemir Galiza",
-    "Thiago Melo",
-    "Carolina Costa",
-    "Claudia Albuquerque",
-    "Mayco Dias",
-    "Roberto Mendes",
-    "Wanderson Pamplona",
   ];
 
   function displayParticipants() {
@@ -41,19 +15,7 @@ const participantes = [
   }
 
 const jogos = [
-    [01,02,04,05,06,09,11,12,13,14,15,18,19,21,24,25],
-    [01,02,04,05,06,09,10,11,13,14,15,16,18,21,22,24],
-    [02,04,05,06,07,08,10,11,12,13,14,15,19,21,24,25],
-    [02,03,05,07,08,09,10,11,12,13,14,15,18,23,24,25],
-    [01,02,04,05,10,11,12,14,15,16,18,19,22,23,24,25],
-    [01,02,04,05,06,07,09,10,11,13,14,18,20,21,24,25],
-    [01,02,04,05,06,07,09,12,13,14,18,19,20,21,22,25],
-    [01,02,03,04,07,09,10,12,13,14,15,17,18,21,24,25],
-    [01,02,04,07,09,10,12,13,15,17,18,19,21,22,24,25],
-    [01,03,05,07,08,09,10,11,12,14,18,19,21,22,24,25],
-    [01,03,04,05,07,08,10,12,13,14,16,18,19,21,24,25],
-    [01,02,06,07,08,09,10,11,12,13,19,20,21,22,24,25],
-    [01,02,04,06,07,10,11,12,13,14,15,16,19,20,22,25],
+
   ];
   
   function calculateTotal() {
