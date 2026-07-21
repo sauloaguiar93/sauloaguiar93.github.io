@@ -1,7 +1,7 @@
 // Jogos previamente cadastrados
 const participantes = [
-  Saulo Aguiar,
-  Hilton Pinheiro,
+  "Saulo Aguiar",
+  "Hilton Pinheiro",
   ];
 
   function displayParticipants() {
