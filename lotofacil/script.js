@@ -2,6 +2,9 @@
 const participantes = [
   "Saulo Aguiar",
   "Hilton Pinheiro",
+  "Kelly Gomes",
+  "Thiago Melo",
+  "Wanderson Brito",
   ];
 
   function displayParticipants() {
