@@ -6,7 +6,9 @@ const participantes = [
   "Thiago Melo",
   "Wanderson Brito",
   "Frank Sampaio",
-  ];
+  "Hary Daniel",
+  "Ilailson Rocha"
+];
 
   function displayParticipants() {
     const participantsList = document.getElementById('participantsList');
