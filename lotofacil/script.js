@@ -11,7 +11,7 @@ const participantes = [
   "Sara Aguiar",
   "Antonio Oliveira",
   "Humberto Almeida"
-  ;
+  ];
 
   function displayParticipants() {
     const participantsList = document.getElementById('participantsList');
