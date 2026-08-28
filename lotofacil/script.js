@@ -1,16 +1,17 @@
 // Jogos previamente cadastrados
 const participantes = [
-  "Saulo Aguiar",
-  "Hilton Pinheiro",
-  "Kelly Gomes",
-  "Thiago Melo",
-  "Wanderson Brito",
-  "Frank Sampaio",
-  "Hary Daniel",
-  "Ilailson Rocha",
-  "Sara Aguiar",
-  "Antonio Oliveira",
-  "Humberto Almeida"
+  "Hilton Pinheiro", #Pagamento_Completo_R$95_20
+  "Saulo Aguiar", #Pagamento_Completo_R$95_20
+  "Kelly Gomes", #Pagamento_Completo_R$95_20
+  "Thiago Melo", #Pagamento_Completo_R$95_20
+  "Wanderson Brito", #Pagamento_Completo_R$95_20
+  "Frank Sampaio", #Pagamento_Completo_R$95_20
+  "Hary Daniel", #Pagamento_Completo_R$95_20
+  "Ilailson Rocha", #Pagamento_Parcial_R$50
+  "Sara Aguiar", #Pagamento_Completo_R$95_20
+  "Antonio Oliveira", #Pagamento_Completo_R$95_20
+  "Humberto Almeida", #Pagamento_Completo_R$95_20
+  "Humberto Almeida", #Pagamento_Parcial_R$47_60
   ];
 
   function displayParticipants() {
