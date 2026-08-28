@@ -7,8 +7,11 @@ const participantes = [
   "Wanderson Brito",
   "Frank Sampaio",
   "Hary Daniel",
-  "Ilailson Rocha"
-];
+  "Ilailson Rocha",
+  "Sara Aguiar",
+  "Antonio Oliveira",
+  "Humberto Almeida"
+  ;
 
   function displayParticipants() {
     const participantsList = document.getElementById('participantsList');
