@@ -1,17 +1,17 @@
 // Jogos previamente cadastrados
 const participantes = [
-  "Hilton Pinheiro", // Pagamento_Completo_R$95_20
-  "Saulo Aguiar", // Pagamento_Completo_R$95_20
-  "Kelly Gomes", // Pagamento_Completo_R$95_20
-  "Thiago Melo", // Pagamento_Completo_R$95_20
-  "Wanderson Brito", // Pagamento_Completo_R$95_20
-  "Frank Sampaio", // Pagamento_Completo_R$95_20
-  "Hary Daniel", // Pagamento_Completo_R$95_20
-  "Ilailson Rocha", // Pagamento_Parcial_R$50
-  "Sara Aguiar", // Pagamento_Completo_R$95_20
-  "Antonio Oliveira", // Pagamento_Completo_R$95_20
-  "Humberto Almeida", // Pagamento_Completo_R$95_20
-  "Humberto Almeida", // Pagamento_Parcial_R$47_60
+  { nome: "Hilton Pinheiro" }, // Pagamento_Completo_R$95_20
+  { nome: "Saulo Aguiar" }, // Pagamento_Completo_R$95_20
+  { nome: "Kelly Gomes" }, // Pagamento_Completo_R$95_20
+  { nome: "Thiago Melo" }, // Pagamento_Completo_R$95_20
+  { nome: "Wanderson Brito" }, // Pagamento_Completo_R$95_20
+  { nome: "Frank Sampaio" }, // Pagamento_Completo_R$95_20
+  { nome: "Hary Daniel" }, // Pagamento_Completo_R$95_20
+  { nome: "Ilailson Rocha", meiaCota: true }, // Pagamento_Parcial_R$50
+  { nome: "Sara Aguiar" }, // Pagamento_Completo_R$95_20
+  { nome: "Antonio Oliveira" }, // Pagamento_Completo_R$95_20
+  { nome: "Humberto Almeida" }, // Pagamento_Completo_R$95_20
+  { nome: "Humberto Almeida", meiaCota: true }, // Pagamento_Parcial_R$47_60
   ];
 
   function displayParticipants() {
@@ -20,8 +20,19 @@ const participantes = [
 
     participantes.forEach(participante => {
       const li = document.createElement('li');
-      li.className = 'list-group-item';
-      li.textContent = participante;
+      li.className = 'list-group-item d-flex align-items-center gap-2';
+
+      const nameSpan = document.createElement('span');
+      nameSpan.textContent = participante.nome;
+      li.appendChild(nameSpan);
+
+      if (participante.meiaCota) {
+        const badge = document.createElement('span');
+        badge.className = 'badge bg-light text-secondary border';
+        badge.textContent = 'meia';
+        li.appendChild(badge);
+      }
+
       participantsList.appendChild(li);
     });
   }
@@ -31,9 +42,9 @@ const jogos = [
   ];
 
   function calculateTotal() {
-    const participantsList = document.querySelectorAll('ol.list-group li');
     const amountPerPerson = 95.20;
-    const totalAmount = participantsList.length * amountPerPerson;
+    const totalCotas = participantes.reduce((s, p) => s + (p.meiaCota ? 0.5 : 1), 0);
+    const totalAmount = totalCotas * amountPerPerson;
 
     document.getElementById('totalValue').textContent = `R$ ${totalAmount.toFixed(2)}`;
   }

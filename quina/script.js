@@ -1,37 +1,37 @@
 // Jogos previamente cadastrados
 const participantes = [
-    "Frank Sampaio",
-    "Hary Daniel",
-    "Lelis Aguiar",
-    "Thiago Melo",
-    "Rennan Brito",
-    "Rafaella Nascimento",
-    "Ilailson Rocha",
-    "Ilailson Rocha",
-    "Ronaldo Souza",
-    "Ronaldo Souza",
-    "Wanderson Pamplona",
-    "Sara Aguiar",
-    "Saulo Aguiar",
-    "Claudio Padilha",
-    "Romero Santana",
-    "Reginaldo Sales",
-    "Gilson Clê",
-    "Wander Melo",
-    "Jonathan Diego",
-    "Roberto Mendes",
-    "Waldiney Barros",
-    "Carolina Costa",
-    "Fabiano Paz",
-    "Jedson Cardoso",
-    "Suely Aguiar",
-    "Raimundo Aguiar",
-    "Kelly Gomes",
-    "Marcia Santos",
-    "Rômulo Rocha",
-    "Leandro Pedro",
-    "Marcus Ne",
-    "Sergio Bittencourt",
+    { nome: "Frank Sampaio" },
+    { nome: "Hary Daniel" },
+    { nome: "Lelis Aguiar" },
+    { nome: "Thiago Melo" },
+    { nome: "Rennan Brito" },
+    { nome: "Rafaella Nascimento" },
+    { nome: "Ilailson Rocha" },
+    { nome: "Ilailson Rocha" },
+    { nome: "Ronaldo Souza" },
+    { nome: "Ronaldo Souza" },
+    { nome: "Wanderson Pamplona" },
+    { nome: "Sara Aguiar" },
+    { nome: "Saulo Aguiar" },
+    { nome: "Claudio Padilha" },
+    { nome: "Romero Santana" },
+    { nome: "Reginaldo Sales" },
+    { nome: "Gilson Clê" },
+    { nome: "Wander Melo" },
+    { nome: "Jonathan Diego" },
+    { nome: "Roberto Mendes" },
+    { nome: "Waldiney Barros" },
+    { nome: "Carolina Costa" },
+    { nome: "Fabiano Paz" },
+    { nome: "Jedson Cardoso" },
+    { nome: "Suely Aguiar" },
+    { nome: "Raimundo Aguiar" },
+    { nome: "Kelly Gomes" },
+    { nome: "Marcia Santos" },
+    { nome: "Rômulo Rocha" },
+    { nome: "Leandro Pedro" },
+    { nome: "Marcus Ne" },
+    { nome: "Sergio Bittencourt" },
   ];
 
   function displayParticipants() {
@@ -40,8 +40,19 @@ const participantes = [
 
     participantes.forEach(participante => {
       const li = document.createElement('li');
-      li.className = 'list-group-item';
-      li.textContent = participante;
+      li.className = 'list-group-item d-flex align-items-center gap-2';
+
+      const nameSpan = document.createElement('span');
+      nameSpan.textContent = participante.nome;
+      li.appendChild(nameSpan);
+
+      if (participante.meiaCota) {
+        const badge = document.createElement('span');
+        badge.className = 'badge bg-light text-secondary border';
+        badge.textContent = 'meia';
+        li.appendChild(badge);
+      }
+
       participantsList.appendChild(li);
     });
   }
@@ -370,9 +381,9 @@ const jogos = [
   ];
 
   function calculateTotal() {
-    const participantsList = document.querySelectorAll('ol.list-group li');
     const amountPerPerson = 30;
-    const totalAmount = participantsList.length * amountPerPerson;
+    const totalCotas = participantes.reduce((s, p) => s + (p.meiaCota ? 0.5 : 1), 0);
+    const totalAmount = totalCotas * amountPerPerson;
 
     document.getElementById('totalValue').textContent = `R$ ${totalAmount.toFixed(2)}`;
   }

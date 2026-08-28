@@ -1,6 +1,6 @@
 // Jogos previamente cadastrados
 const participantes = [
-    "Saulo Aguiar"
+    { nome: "Saulo Aguiar" }
   ];
 
   function displayParticipants() {
@@ -9,8 +9,19 @@ const participantes = [
 
     participantes.forEach(participante => {
       const li = document.createElement('li');
-      li.className = 'list-group-item';
-      li.textContent = participante;
+      li.className = 'list-group-item d-flex align-items-center gap-2';
+
+      const nameSpan = document.createElement('span');
+      nameSpan.textContent = participante.nome;
+      li.appendChild(nameSpan);
+
+      if (participante.meiaCota) {
+        const badge = document.createElement('span');
+        badge.className = 'badge bg-light text-secondary border';
+        badge.textContent = 'meia';
+        li.appendChild(badge);
+      }
+
       participantsList.appendChild(li);
     });
   }
@@ -21,9 +32,9 @@ const jogos = [
   ];
 
   function calculateTotal() {
-    const participantsList = document.querySelectorAll('ol.list-group li');
     const amountPerPerson = 35;
-    const totalAmount = participantsList.length * amountPerPerson;
+    const totalCotas = participantes.reduce((s, p) => s + (p.meiaCota ? 0.5 : 1), 0);
+    const totalAmount = totalCotas * amountPerPerson;
 
     document.getElementById('totalValue').textContent = `R$ ${totalAmount.toFixed(2)}`;
   }
