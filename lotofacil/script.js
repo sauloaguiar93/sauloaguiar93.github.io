@@ -14,6 +14,7 @@ const participantes = [
   { nome: "Humberto Almeida", meiaCota: true }, // Pagamento_Parcial_R$47_60
   { nome: "Jedson Cardoso" }, // Pagamento_Parcial_R$95_20
   { nome: "Jedson Cardoso", meiaCota: true }, // Pagamento_Parcial_R$47_60
+  { nome: "Rafaella Nascimento" }, // Pagamento_Parcial_R$95_20
   ];
 
   function displayParticipants() {
