@@ -21,6 +21,8 @@ const participantes = [
   { nome: "Claudio Padilha" }, // Pagamento_Completo_R$95_20
   { nome: "Wander Melo" }, // Pagamento_Completo_R$95_20
   { nome: "Diego Felix" }, // Pagamento_Completo_R$95_20
+  { nome: "Suely Aguiar" }, // Pagamento_Completo_R$95_20
+  { nome: "Raimundo Aguiar" }, // Pagamento_Completo_R$95_20
   ];
 
   function displayParticipants() {
