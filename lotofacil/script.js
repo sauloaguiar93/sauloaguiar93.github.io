@@ -17,6 +17,10 @@ const participantes = [
   { nome: "Rafaella Nascimento" }, // Pagamento_Completo_R$95_20
   { nome: "Sergio Bittencourt" }, // Pagamento_Completo_R$95_20
   { nome: "Lelis Aguiar" }, // Pagamento_Completo_R$95_20
+  { nome: "Carolina Costa" }, // Pagamento_Completo_R$95_20
+  { nome: "Claudio Padilha" }, // Pagamento_Completo_R$95_20
+  { nome: "Wander Melo" }, // Pagamento_Completo_R$95_20
+  { nome: "Diego Felix" }, // Pagamento_Completo_R$95_20
   ];
 
   function displayParticipants() {
