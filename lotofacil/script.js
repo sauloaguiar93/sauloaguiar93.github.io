@@ -23,6 +23,9 @@ const participantes = [
   { nome: "Diego Felix" }, // Pagamento_Completo_R$95_20
   { nome: "Suely Aguiar" }, // Pagamento_Completo_R$95_20
   { nome: "Raimundo Aguiar" }, // Pagamento_Completo_R$95_20
+  { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
+  { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
+  { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
   ];
 
   function displayParticipants() {
