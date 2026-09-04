@@ -7,7 +7,7 @@ const participantes = [
   { nome: "Wanderson Brito" }, // Pagamento_Completo_R$95_20
   { nome: "Frank Sampaio" }, // Pagamento_Completo_R$95_20
   { nome: "Hary Daniel" }, // Pagamento_Completo_R$95_20
-  { nome: "Ilailson Rocha", meiaCota: true }, // Pagamento_Parcial_R$50
+  { nome: "Ilailson Rocha", }, // Pagamento_Parcial_R$50
   { nome: "Sara Aguiar" }, // Pagamento_Completo_R$95_20
   { nome: "Antonio Oliveira" }, // Pagamento_Completo_R$95_20
   { nome: "Humberto Almeida" }, // Pagamento_Completo_R$95_20
@@ -30,6 +30,7 @@ const participantes = [
   { nome: "Ronaldo Souza" }, // Pagamento_Completo_R$95_20
   { nome: "Reginaldo Sales" }, // Pagamento_Completo_R$95_20
   { nome: "Ney Barros" }, // Pagamento_Completo_R$95_20
+  { nome: "EdBruno Silva" }, // Pagamento_Completo_R$95_20
   ];
 
   function displayParticipants() {
