@@ -1,25 +1,27 @@
 // Jogos previamente cadastrados
 const participantes = [
-  { nome: "Hilton Pinheiro" }, // MegaSena
-  { nome: "Saulo Aguiar" }, // MegaSena
-  { nome: "Kelly Gomes" }, // MegaSena
-  { nome: "Thiago Melo" }, // MegaSena
-  { nome: "Frank Sampaio" }, // MegaSena
-  { nome: "Hary Daniel" }, // MegaSena
-  { nome: "Manoel Neto" }, // MegaSena
-  { nome: "Marcia Santos" }, // MegaSena
-  { nome: "Antonio Oliveira" }, // MegaSena
-  { nome: "Wander Melo" }, // MegaSena
-  { nome: "Suely Aguiar" }, // MegaSena
-  { nome: "Raimundo Aguiar" }, // MegaSena
-  { nome: "Rennan Brito" }, // MegaSena
-  { nome: "Ilailson Rocha", }, // Pagamento_Parcial_R$50
+  { nome: "Hilton Pinheiro - MegaSena" }, 
+  { nome: "Saulo Aguiar - MegaSena" }, 
+  { nome: "Rafaella Nasciment - MegaSena" },
+  { nome: "Kelly Gomes - MegaSena" }, 
+  { nome: "Thiago Melo - MegaSena" }, 
+  { nome: "Frank Sampaio - MegaSena" }, 
+  { nome: "Hary Daniel - MegaSena" }, 
+  { nome: "Manoel Neto - MegaSena" }, 
+  { nome: "Marcia Santos - MegaSena" }, 
+  { nome: "Antonio Oliveira - MegaSena" }, 
+  { nome: "Wander Melo - MegaSena" }, 
+  { nome: "Suely Aguiar - MegaSena" }, 
+  { nome: "Raimundo Aguiar - MegaSena" }, 
+  { nome: "Rennan Brito - MegaSena" }, 
+  { nome: "Ilailson Rocha - MegaSena", },
+  { nome: "Ney Barros - MegaSena" },
+  { nome: "EdBruno Silva - MegaSena" },
   { nome: "Sara Aguiar" }, // Pagamento_Completo_R$95_20
   { nome: "Humberto Almeida" }, // Pagamento_Completo_R$95_20
   { nome: "Humberto Almeida", meiaCota: true }, // Pagamento_Parcial_R$47_60
   { nome: "Jedson Cardoso" }, // Pagamento_Parcial_R$95_20
   { nome: "Jedson Cardoso", meiaCota: true }, // Pagamento_Parcial_R$47_60
-  { nome: "Rafaella Nascimento" }, // Pagamento_Completo_R$95_20
   { nome: "Sergio Bittencourt" }, // Pagamento_Completo_R$95_20
   { nome: "Lelis Aguiar" }, // Pagamento_Completo_R$95_20
   { nome: "Carolina Costa" }, // Pagamento_Completo_R$95_20
@@ -28,8 +30,6 @@ const participantes = [
   { nome: "Ronaldo Souza" }, // Pagamento_Completo_R$95_20
   { nome: "Ronaldo Souza" }, // Pagamento_Completo_R$95_20
   { nome: "Reginaldo Sales" }, // Pagamento_Completo_R$95_20
-  { nome: "Ney Barros" }, // Pagamento_Completo_R$95_20
-  { nome: "EdBruno Silva" }, // Pagamento_Completo_R$95_20
   { nome: "Jorzinaldo Correa" }, // Pagamento_Completo_R$95_20
   { nome: "Brenda Moraes" }, // Pagamento_Completo_R$95_20
   { nome: "Maia Batista" }, // Pagamento_Completo_R$95_20
@@ -43,6 +43,7 @@ const participantes = [
   { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
   { nome: "Wanderson Brito" }, // Pagamento_Completo_R$95_20
   ];
+
 
   function displayParticipants() {
     const participantsList = document.getElementById('participantsList');
