@@ -1,37 +1,49 @@
 // Jogos previamente cadastrados
+// Jogos previamente cadastrados
 const participantes = [
-    { nome: "Frank Sampaio" },
-    { nome: "Hary Daniel" },
-    { nome: "Lelis Aguiar" },
-    { nome: "Thiago Melo" },
-    { nome: "Rennan Brito" },
-    { nome: "Rafaella Nascimento" },
-    { nome: "Ilailson Rocha" },
-    { nome: "Ilailson Rocha" },
-    { nome: "Ronaldo Souza" },
-    { nome: "Ronaldo Souza" },
-    { nome: "Wanderson Pamplona" },
-    { nome: "Sara Aguiar" },
-    { nome: "Saulo Aguiar" },
-    { nome: "Claudio Padilha" },
-    { nome: "Romero Santana" },
-    { nome: "Reginaldo Sales" },
-    { nome: "Gilson Clê" },
-    { nome: "Wander Melo" },
-    { nome: "Jonathan Diego" },
-    { nome: "Roberto Mendes" },
-    { nome: "Waldiney Barros" },
-    { nome: "Carolina Costa" },
-    { nome: "Fabiano Paz" },
-    { nome: "Jedson Cardoso" },
-    { nome: "Suely Aguiar" },
-    { nome: "Raimundo Aguiar" },
-    { nome: "Kelly Gomes" },
-    { nome: "Marcia Santos" },
-    { nome: "Rômulo Rocha" },
-    { nome: "Leandro Pedro" },
-    { nome: "Marcus Ne" },
-    { nome: "Sergio Bittencourt" },
+  { nome: "Hilton Pinheiro" }, // Pagamento_Completo_R$95_20
+  { nome: "Saulo Aguiar" }, // Pagamento_Completo_R$95_20
+  { nome: "Kelly Gomes" }, // Pagamento_Completo_R$95_20
+  { nome: "Thiago Melo" }, // Pagamento_Completo_R$95_20
+  { nome: "Wanderson Brito" }, // Pagamento_Completo_R$95_20
+  { nome: "Frank Sampaio" }, // Pagamento_Completo_R$95_20
+  { nome: "Hary Daniel" }, // Pagamento_Completo_R$95_20
+  { nome: "Ilailson Rocha", }, // Pagamento_Parcial_R$50
+  { nome: "Sara Aguiar" }, // Pagamento_Completo_R$95_20
+  { nome: "Antonio Oliveira" }, // Pagamento_Completo_R$95_20
+  { nome: "Humberto Almeida" }, // Pagamento_Completo_R$95_20
+  { nome: "Humberto Almeida", meiaCota: true }, // Pagamento_Parcial_R$47_60
+  { nome: "Jedson Cardoso" }, // Pagamento_Parcial_R$95_20
+  { nome: "Jedson Cardoso", meiaCota: true }, // Pagamento_Parcial_R$47_60
+  { nome: "Rafaella Nascimento" }, // Pagamento_Completo_R$95_20
+  { nome: "Sergio Bittencourt" }, // Pagamento_Completo_R$95_20
+  { nome: "Lelis Aguiar" }, // Pagamento_Completo_R$95_20
+  { nome: "Carolina Costa" }, // Pagamento_Completo_R$95_20
+  { nome: "Claudio Padilha" }, // Pagamento_Completo_R$95_20
+  { nome: "Wander Melo" }, // Pagamento_Completo_R$95_20
+  { nome: "Diego Felix" }, // Pagamento_Completo_R$95_20
+  { nome: "Suely Aguiar" }, // Pagamento_Completo_R$95_20
+  { nome: "Raimundo Aguiar" }, // Pagamento_Completo_R$95_20
+  { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
+  { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
+  { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
+  { nome: "Ronaldo Souza" }, // Pagamento_Completo_R$95_20
+  { nome: "Ronaldo Souza" }, // Pagamento_Completo_R$95_20
+  { nome: "Reginaldo Sales" }, // Pagamento_Completo_R$95_20
+  { nome: "Ney Barros" }, // Pagamento_Completo_R$95_20
+  { nome: "EdBruno Silva" }, // Pagamento_Completo_R$95_20
+  { nome: "Jorzinaldo Correa" }, // Pagamento_Completo_R$95_20
+  { nome: "Brenda Moraes" }, // Pagamento_Completo_R$95_20
+  { nome: "Rennan Brito" }, // Pagamento_Completo_R$95_20
+  { nome: "Maia Batista" }, // Pagamento_Completo_R$95_20
+  { nome: "Romero Santana" }, // Pagamento_Completo_R$95_20
+  { nome: "José Pinage" }, // Pagamento_Completo_R$95_20
+  // { nome: "Ivanildo Tavares" }, // Pagamento_Completo_R$95_20
+  { nome: "Manoel Neto" }, // Pagamento_Completo_R$95_20
+  { nome: "Marcia Santos" }, // Pagamento_Completo_R$95_20
+  { nome: "Ledson Aguiar" }, // Pagamento_Completo_R$95_20
+  { nome: "Everton Luiz" }, // Pagamento_Completo_R$95_20
+  { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
   ];
 
   function displayParticipants() {
