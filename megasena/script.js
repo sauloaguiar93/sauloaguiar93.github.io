@@ -17,31 +17,31 @@ const participantes = [
   { nome: "Ilailson Rocha - MegaSena", },
   { nome: "Ney Barros - MegaSena" },
   { nome: "EdBruno Silva - MegaSena" },
-  { nome: "Sara Aguiar" }, // Pagamento_Completo_R$95_20
-  { nome: "Humberto Almeida" }, // Pagamento_Completo_R$95_20
-  { nome: "Humberto Almeida", meiaCota: true }, // Pagamento_Parcial_R$47_60
-  { nome: "Jedson Cardoso" }, // Pagamento_Parcial_R$95_20
-  { nome: "Jedson Cardoso", meiaCota: true }, // Pagamento_Parcial_R$47_60
-  { nome: "Sergio Bittencourt" }, // Pagamento_Completo_R$95_20
+  { nome: "Marcus Né - MegaSena" },
+  { nome: "Marcus Né - MegaSena" },
+  { nome: "Marcus Né - MegaSena" },
+  { nome: "Marcus Né - MegaSena" },
+  { nome: "Sara Aguiar - MegaSena" },
+  { nome: "Humberto Almeida - MegaSena" },
+  { nome: "Humberto Almeida - MegaSena", meiaCota: true },
+  { nome: "Jorzinaldo Correa - MegaSena" }, // Pagamento_Completo_R$95_20
+  { nome: "Wanderson Brito - MegaSena" }, // Pagamento_Completo_R$95_20
+  { nome: "Reginaldo Sales - Lotofácil" }, // Pagamento_Completo_R$95_20
+  { nome: "Sergio Bittencourt - Lotofácil" }, // Pagamento_Completo_R$95_20
   { nome: "Lelis Aguiar" }, // Pagamento_Completo_R$95_20
   { nome: "Carolina Costa" }, // Pagamento_Completo_R$95_20
   { nome: "Claudio Padilha" }, // Pagamento_Completo_R$95_20
   { nome: "Diego Felix" }, // Pagamento_Completo_R$95_20
   { nome: "Ronaldo Souza" }, // Pagamento_Completo_R$95_20
   { nome: "Ronaldo Souza" }, // Pagamento_Completo_R$95_20
-  { nome: "Reginaldo Sales" }, // Pagamento_Completo_R$95_20
-  { nome: "Jorzinaldo Correa" }, // Pagamento_Completo_R$95_20
   { nome: "Brenda Moraes" }, // Pagamento_Completo_R$95_20
   { nome: "Maia Batista" }, // Pagamento_Completo_R$95_20
   { nome: "Romero Santana" }, // Pagamento_Completo_R$95_20
   { nome: "José Pinage" }, // Pagamento_Completo_R$95_20
   { nome: "Ledson Aguiar" }, // Pagamento_Completo_R$95_20
   { nome: "Everton Luiz" }, // Pagamento_Completo_R$95_20
-  { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
-  { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
-  { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
-  { nome: "Marcus Né" }, // Pagamento_Completo_R$95_20
-  { nome: "Wanderson Brito" }, // Pagamento_Completo_R$95_20
+  { nome: "Jedson Cardoso" }, // Pagamento_Parcial_R$95_20
+  { nome: "Jedson Cardoso", meiaCota: true }, // Pagamento_Parcial_R$47_60
   ];
 
 
