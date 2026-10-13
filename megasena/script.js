@@ -21,6 +21,7 @@ const participantes = [
   { nome: "Ilailson Rocha" },
   { nome: "Fabiano Paz" },
   { nome: "Yasmim Pantoja" },
+  { nome: "Mayco Dias" },
   // { nome: "Hilton Pinheiro" }, 
   // { nome: "Saulo Aguiar" }, 
   // { nome: "Rafaella Nasciment" },
