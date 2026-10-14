@@ -48,7 +48,7 @@ const participantes = [
   { nome: "Nonata Souza" },
   { nome: "Saulo Aguiar" }, 
   { nome: "Saulo Aguiar" }, 
-  // { nome: "Saulo Aguiar" }, 
+  { nome: "Edbruno Silva" }, 
   // { nome: "Saulo Aguiar" }, 
   ];
 
