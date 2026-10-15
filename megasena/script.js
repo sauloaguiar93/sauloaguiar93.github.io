@@ -17,6 +17,7 @@ const participantes = [
   { nome: "Ilailson Rocha" },
   { nome: "Jedson Cardoso" },
   { nome: "Jedson Cardoso" },
+  { nome: "Marcos Almeida" },
   // { nome: "Wanderson Pamplona" }, 
   // { nome: "Antonio Oliveira" }, 
   // { nome: "Antonio Oliveira" }, 
