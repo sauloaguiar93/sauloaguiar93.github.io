@@ -25,6 +25,7 @@ const participantes = [
   { nome: "Suely Aguiar" }, 
   { nome: "Raimundo Aguiar" }, 
   { nome: "Jorzinaldo Correa" },
+  { nome: "Jorzinaldo Correa" },
   { nome: "Maia Batista" },
   { nome: "Elder Thiago" },
   { nome: "Elder Thiago" },
