@@ -44,6 +44,7 @@ const participantes = [
   { nome: "Hary Daniel" }, 
   { nome: "Hary Daniel" }, 
   { nome: "Carolina Costa" },
+  { nome: "Carolina Costa" },
   { nome: "Marcos Almeida" },
   //  { nome: "Frank Sampaio" }, 
   //  { nome: "Frank Sampaio" }, 
