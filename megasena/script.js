@@ -45,6 +45,7 @@ const participantes = [
   { nome: "Raimundo Aguiar" }, 
   { nome: "Sara Aguiar" },
   { nome: "Reginaldo Sales" },  
+  { nome: "Maia Batista" },
   
   // { nome: "Wesley Souza" },
   // { nome: "João Ricardo" }, 
@@ -58,7 +59,6 @@ const participantes = [
   // { nome: "Marcos Almeida" },
   //  { nome: "Frank Sampaio" }, 
   // { nome: "Fabiano Paz" },
-  // { nome: "Maia Batista" },
   // { nome: "Kelly Gomes" }, 
   // { nome: "Naldo Souza" }, 
   // { nome: "Romulo Kleber" }, 
