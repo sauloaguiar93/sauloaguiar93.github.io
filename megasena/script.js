@@ -18,7 +18,7 @@ const participantes = [
   { nome: "Ilailson Rocha" },
   { nome: "Lelis Aguiar" },
   { nome: "Thiago Melo" }, 
-  { nome: "Cleber Souza" }, 
+  { nome: "Marcus Né" }, 
   { nome: "Jedson Cardoso" },
   { nome: "Jedson Cardoso" },
   { nome: "Cicero Lopes" },
