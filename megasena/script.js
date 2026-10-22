@@ -46,10 +46,10 @@ const participantes = [
   { nome: "Sara Aguiar" },
   { nome: "Reginaldo Sales" },  
   { nome: "Maia Batista" },
+  { nome: "Marcia Santos" }, 
   
   // { nome: "Wesley Souza" },
   // { nome: "João Ricardo" }, 
-  // { nome: "Marcia Santos" }, 
   // { nome: "Gilson Clê"},
   // { nome: "Roberto Mendes" },
   // { nome: "Yasmim Pantoja" },
