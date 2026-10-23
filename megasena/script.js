@@ -52,6 +52,7 @@ const participantes = [
   { nome: "Frank Sampaio" }, 
   { nome: "Claudio Padilha" },
   { nome: "Tania Maria" },
+  { nome: "Tania Maria" },
   // { nome: "Ivanildo Tavares" },
   // { nome: "Benaldo Lima" },
   // { nome: "Wander Melo" },
