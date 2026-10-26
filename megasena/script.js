@@ -55,8 +55,8 @@ const participantes = [
     { nome: "Reginaldo Sales" },  
     { nome: "Emerson Marcelo" },
     { nome: "Claudia Albuquerque" },
+    { nome: "Edbruno Silva" }, 
     { nome: "Sara Aguiar" },
-    { nome: "Saulo Aguiar" },
     { nome: "Saulo Aguiar" }, 
     { nome: "Saulo Aguiar" },
     { nome: "Saulo Aguiar" },
@@ -76,7 +76,6 @@ const participantes = [
   // { nome: "Fabiano Paz" },
   // { nome: "Naldo Souza" }, 
   // { nome: "Romulo Kleber" }, 
-  // { nome: "Edbruno Silva" }, 
   // { nome: "Nonata Souza" },
   ];
 
