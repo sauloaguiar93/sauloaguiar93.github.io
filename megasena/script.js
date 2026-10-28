@@ -43,6 +43,7 @@ const participantes = [
     { nome: "Hary Daniel" }, 
     { nome: "Hary Daniel" }, 
     { nome: "Samuel Cordeiro" }, 
+    { nome: "Samuel Cordeiro" }, 
     { nome: "Fabricio Pereira" }, 
     { nome: "Roberto Mendes" },
     { nome: "Rennan Brito" },
