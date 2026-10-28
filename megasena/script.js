@@ -54,7 +54,6 @@ const participantes = [
     { nome: "Sara Aguiar" },
     { nome: "Saulo Aguiar" },
     { nome: "Saulo Aguiar" }, 
-    { nome: "Saulo Aguiar" },
     // { nome: "Wander Melo" },
     // { nome: "Maria Sousa" }, 
     // { nome: "Paulo Victor" }, 
