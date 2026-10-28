@@ -53,7 +53,7 @@ const participantes = [
     { nome: "Carolina Costa" }, 
     { nome: "Sara Aguiar" },
     { nome: "Reginaldo Sales" },  
-    { nome: "Saulo Aguiar" }, 
+    { nome: "Yasmim Pantoja" }, 
     // { nome: "Wander Melo" },
     // { nome: "Maria Sousa" }, 
     // { nome: "Paulo Victor" }, 
